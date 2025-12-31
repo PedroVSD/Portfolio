@@ -153,7 +153,7 @@ a {
 
 /* Destaque no texto com fundo amarelo (estilo marca-texto) */
 .highlight {
-    background: linear-gradient(120deg, transparent 0%, transparent 60%, var(--accent-color) 60%, var(--accent-color) 90%, transparent 90%);
+    background: linear-gradient(120deg, transparent 6%, transparent 0%, var(--accent-color) 0%, var(--accent-color) 90%, transparent 90%);
     color: #000;
 }
 
@@ -367,18 +367,13 @@ footer {
 }
 
 @media (max-width: 700px) {
-    /* Regra Matriz 2x2 para os botões sociais */
     .social-links {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
         width: 100%;
-        max-width: 400px; /* Limita largura para não esticar demais */
-        margin: 0 auto; /* Centraliza a grid */
-    }
-    
-    .social-links a:last-child {
-        grid-column: span 2;
+        max-width: 400px;
+        margin: 0 auto;
     }
     
     .social-links a {
@@ -396,19 +391,4 @@ footer {
 
     .nav-links { gap: 1.5rem; }
     .hero { padding-top: 140px; }
-}
-
-@media (max-width: 700px) {
-
-    .social-links {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        width: 100%;
-    }
-
-    .social-links a {
-        width: 100%;
-        text-align: center;
-    }
 }
