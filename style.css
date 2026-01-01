@@ -421,10 +421,6 @@ footer {
         max-width: 400px;
         margin: 0 auto;
     }
-    
-    .social-links a:last-child {
-        grid-column: span 2; /* O último ocupa a linha toda */
-    }
 
     .social-links a {
         width: 100%;
