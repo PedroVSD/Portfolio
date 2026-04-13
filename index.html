@@ -1,192 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meu Portfólio</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">Pedro Vitor</div>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="https://drive.google.com/drive/folders/1KVaLb2bo9r-dl7FvZC98d-Il50STvRUP?usp=drive_link" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-user-icon lucide-file-user"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M16 22a4 4 0 0 0-8 0"/><circle cx="12" cy="15" r="3"/></svg></a></li>
+            </ul>
+            <button
+                id="theme-toggle"
+                class="theme-btn"
+                aria-label="Alternar Tema"
+            >
+                <span class="icon"
+                    ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-sun-moon-icon lucide-sun-moon"
+                    >
+                        <path d="M12 2v2" />
+                        <path
+                            d="M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715"
+                        />
+                        <path d="M16 12a4 4 0 0 0-4-4" />
+                        <path d="m19 5-1.256 1.256" />
+                        <path d="M20 12h2" /></svg
+                ></span>
+            </button>
+        </nav>
 
-    <nav class="navbar">
-        <div class="logo">Pedro Vitor</div>
-        <ul class="nav-links">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-        <button id="theme-toggle" class="theme-btn" aria-label="Alternar Tema">
-            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-moon-icon lucide-sun-moon"><path d="M12 2v2"/><path d="M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715"/><path d="M16 12a4 4 0 0 0-4-4"/><path d="m19 5-1.256 1.256"/><path d="M20 12h2"/></svg></span>
-        </button>
-    </nav>
-
-    <header id="sobre" class="hero">
-    <div class="container hero-container">
-        <div class="hero-text">
-            <h1>Olá, me chamo <span class="highlight">Pedro Vitor</span></h1>
-            <p>Sou estudante de Ciência da Computação com interesse em análise de dados, engenharia de dados e desenvolvimento de software.</p>
-            <div class="hero-buttons">
-                <a href="#projetos" class="btn">Ver Projetos</a>
-                <a href="#contato" class="btn-outline">Entrar em contato</a>
-            </div>
-        </div>
-        
-        <div class="hero-image">
-            <div class="img-placeholder"></div> 
-        </div>
-    </div>
-</header>
-
-    <section id="projetos" class="container">
-        <h2>Meus Projetos</h2>
-        <h2>Projetos de dados</h2>
-        <div class="projects-grid">
-           
-            <div class="project-card">
-                <h3>Sistema de recomendação de filmes</h3>
-                <p>Um simples sistema de recomendação de filmes. Onde o usuário escolhe o número de filmes que deseja avaliar e o sistema recomenda uma lista de filmes que ele possivelmente irá gostar.</p>
-                <div class="tech-stack">
-                    <span>Python</span> <span>Aprendizado de máquina</span> <span>KNN</span>
-                    <span>Scikit learn</span> <span>Pandas</span> <span>Numpy</span>
+        <header id="sobre" class="hero">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1>
+                        Olá, me chamo <span class="highlight">Pedro Vitor</span>
+                    </h1>
+                    <p>
+                        Sou estudante de Ciência da Computação com interesse em
+                        análise de dados, engenharia de dados e desenvolvimento
+                        de software.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projetos" class="btn">Ver Projetos</a>
+                        <a href="#contato" class="btn-outline"
+                            >Entrar em contato</a
+                        >
+                    </div>
                 </div>
-                <div class="links">
-                    <a href="https://github.com/PedroVSD/Ciencia-de-dados/tree/main/Sistema%20de%20recomenda%C3%A7%C3%A3o" target="_blank">Ver Código</a>
-                    <a href="#">Demo Online</a>
-                </div>
-            </div>
 
-            <div class="project-card">
-                <h3>Mini curso de aprendizado de máquina.</h3>
-                <p>Ministrei um mini curso de introdução a aprendizado de máquina. O curso cobriu assuntos como tratamento dos dados, a parte estatística e aplicação dos algoritmos em si.</p>
-                <div class="tech-stack">
-                    <span>Python</span> <span>Estatística</span> <span>Aprendizado de máquina</span>
-                    <span>Scikit learn</span> <span>Pandas</span> <span>Numpy</span> <span>Matplotlib</span>
-                </div>
-                <div class="links">
-                    <a href="#">Ver Código</a>
-                    <a href="#">Demo Online</a>
-                </div>
-            </div>
-
-
-            <div class="project-card">
-                <h3>Regressão linear</h3>
-                <p>Desenvolvimento do algoritmo de regressão linear de forma iterativa. Os dados são tratados, desde a verificação de valores faltantes até a normalização de dados numéricos.</p>
-                <div class="tech-stack">
-                    <span>Python</span> <span>Aprendizado de máquina</span>
-                    <span>Scikit learn</span> <span>Pandas</span> <span>Numpy</span> <span>Matplotlib</span>
-                </div>
-                <div class="links">
-                    <a href="#">Ver Código</a>
-                    <a href="#">Demo Online</a>
+                <div class="hero-image">
+                    <div class="img-placeholder"></div>
                 </div>
             </div>
+        </header>
 
-            <div class="project-card">
-                <h3>Classificação com redes neurais</h3>
-                <p>Um sistema de rede neural densa treinada para resolver um problema de classificação</p>
-                <div class="tech-stack">
-                    <span>Python</span> <span>Aprendizado de máquina</span> <span>Keras</span> <span>Seaborn</span> <span>Tensorflow</span>
-                    <span>Scikit learn</span> <span>Pandas</span> <span>Numpy</span> <span>Matplotlib</span>
+        <section id="projetos" class="container">
+            <h2>Meus Projetos</h2>
+            <h2>Projetos de dados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Sistema de recomendação de filmes</h3>
+                    <p>
+                        Um simples sistema de recomendação de filmes. Onde o
+                        usuário escolhe o número de filmes que deseja avaliar e
+                        o sistema recomenda uma lista de filmes que ele
+                        possivelmente irá gostar.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span> <span>Aprendizado de máquina</span>
+                        <span>KNN</span> <span>Scikit learn</span>
+                        <span>Pandas</span> <span>Numpy</span>
+                    </div>
+                    <div class="links">
+                        <a
+                            href="https://github.com/PedroVSD/Ciencia-de-dados/tree/main/Sistema%20de%20recomenda%C3%A7%C3%A3o"
+                            target="_blank"
+                            >Ver Código</a
+                        >
+                        <a href="#">Demo Online</a>
+                    </div>
                 </div>
-                <div class="links">
-                    <a href="#">Ver Código</a>
-                    <a href="#">Demo Online</a>
+
+                <div class="project-card">
+                    <h3>Mini curso de aprendizado de máquina.</h3>
+                    <p>
+                        Ministrei um mini curso de introdução a aprendizado de
+                        máquina. O curso cobriu assuntos como tratamento dos
+                        dados, a parte estatística e aplicação dos algoritmos em
+                        si.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span> <span>Estatística</span>
+                        <span>Aprendizado de máquina</span>
+                        <span>Scikit learn</span> <span>Pandas</span>
+                        <span>Numpy</span> <span>Matplotlib</span>
+                    </div>
+                    <div class="links">
+                        <a href="#">Ver Código</a>
+                        <a href="#">Demo Online</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Regressão linear</h3>
+                    <p>
+                        Desenvolvimento do algoritmo de regressão linear de
+                        forma iterativa. Os dados são tratados, desde a
+                        verificação de valores faltantes até a normalização de
+                        dados numéricos.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span> <span>Aprendizado de máquina</span>
+                        <span>Scikit learn</span> <span>Pandas</span>
+                        <span>Numpy</span> <span>Matplotlib</span>
+                    </div>
+                    <div class="links">
+                        <a href="#">Ver Código</a>
+                        <a href="#">Demo Online</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Classificação com redes neurais</h3>
+                    <p>
+                        Um sistema de rede neural densa treinada para resolver
+                        um problema de classificação
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span> <span>Aprendizado de máquina</span>
+                        <span>Keras</span> <span>Seaborn</span>
+                        <span>Tensorflow</span> <span>Scikit learn</span>
+                        <span>Pandas</span> <span>Numpy</span>
+                        <span>Matplotlib</span>
+                    </div>
+                    <div class="links">
+                        <a href="#">Ver Código</a>
+                        <a href="#">Demo Online</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Análise de dados</h3>
+                    <p>
+                        Realizei uma análise de um conjunto de dados do IBGE. E
+                        a partir disso descobrir padrões e datalhes. Utilizei
+                        desde técnicas de machine learning como mineração de
+                        dados.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span> <span>Aprendizado de máquina</span>
+                        <span>Mineração de dados</span> <span>Pandas</span>
+                        <span>Numpy</span> <span>Matplotlib</span>
+                        <span>Seaborn</span>
+                    </div>
+                    <div class="links">
+                        <a href="#">Ver Código</a>
+                        <a href="#">Demo Online</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Regras de associação</h3>
+                    <p>
+                        Nesse projeto realizei a análise do dataset para
+                        averiguar as regras de associação. Mais específico,para
+                        analisar o que levava ao churn no dataset.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span> <span>Aprendizado de máquina</span>
+                        <span>Mineração de dados</span> <span>FP-Growth</span>
+                        <span>Pandas</span> <span>Numpy</span>
+                        <span>Matplotlib</span>
+                    </div>
+                    <div class="links">
+                        <a
+                            href="https://github.com/PedroVSD/Ciencia-de-dados/tree/main/Regras%20de%20associa%C3%A7%C3%A3o"
+                            target="_blank"
+                            >Ver Código</a
+                        >
+                        <a href="#">Demo Online</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Clustering</h3>
+                    <p>
+                        Analisei um dataset, e utilizando o PCA e o Kprototypes,
+                        fiz o agrupamento baseado na correlação dos dados.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span> <span>Aprendizado de máquina</span>
+                        <span>Kmodes</span> <span>Kprototypes</span>
+                        <span>Pandas</span> <span>Numpy</span>
+                        <span>Matplotlib</span>
+                    </div>
+                    <div class="links">
+                        <a href="#">Ver Código</a>
+                        <a href="#">Demo Online</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="project-card">
-                <h3>Análise de dados</h3>
-                <p>Realizei uma análise de um conjunto de dados do IBGE. E a partir disso descobrir padrões e datalhes. 
-                    Utilizei desde técnicas de machine learning como mineração de dados.</p>
-                <div class="tech-stack">
-                    <span>Python</span> <span>Aprendizado de máquina</span> <span>Mineração de dados</span>
-                    <span>Pandas</span> <span>Numpy</span> <span>Matplotlib</span> <span>Seaborn</span>
-                </div>
-                <div class="links">
-                    <a href="#">Ver Código</a>
-                    <a href="#">Demo Online</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Regras de associação</h3>
-                <p>Nesse projeto realizei a análise do dataset para averiguar as regras de associação. Mais específico,para analisar o que levava ao churn no dataset.</p>
-                <div class="tech-stack">
-                    <span>Python</span> <span>Aprendizado de máquina</span> <span>Mineração de dados</span>
-                    <span>FP-Growth</span> <span>Pandas</span> <span>Numpy</span> <span>Matplotlib</span>
-                </div>
-                <div class="links">
-                    <a href="https://github.com/PedroVSD/Ciencia-de-dados/tree/main/Regras%20de%20associa%C3%A7%C3%A3o" target="_blank">Ver Código</a>
-                    <a href="#">Demo Online</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Clustering</h3>
-                <p>Analisei um dataset, e utilizando o PCA e o Kprototypes, fiz o agrupamento baseado na correlação dos dados.</p>
-                <div class="tech-stack">
-                    <span>Python</span> <span>Aprendizado de máquina</span> <span>Kmodes</span> <span>Kprototypes</span>
-                    <span>Pandas</span> <span>Numpy</span> <span>Matplotlib</span>
-                </div>
-                <div class="links">
-                    <a href="#">Ver Código</a>
-                    <a href="#">Demo Online</a>
+            <h2>Projetos de desenvolvimento</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>E-commerce de jogos.</h3>
+                    <p>
+                        Desenvolvi um e-commerce relacionados a jogos utilizando
+                        o framework Adonisjs, que se baseia na arquitetura MVC.
+                        O projeto contém desde um crud de produtos(busca e
+                        paginação dos produtos) e usuários(níveis de usuário e
+                        admin), como também carrinho, notificações utilizando
+                        ajax, integração com a API de pagamentos stripe, e
+                        também população do banco de dados pela a API da rawg.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Desenvolvimento web</span> <span>TypeScript</span>
+                        <span>JavaScript</span> <span>Node</span>
+                        <span>HTML/CSS</span> <span>Banco de dados</span>
+                        <span>ORM</span>
+                    </div>
+                    <div class="links">
+                        <a
+                            href="https://github.com/PedroVSD/Ecommerc"
+                            target="_blank"
+                            >Ver Código</a
+                        >
+                        <a href="https://youtu.be/LY023Wg-w5k">Demo Online</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <h2>Projetos de desenvolvimento</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>E-commerce de jogos.</h3>
-                <p>Desenvolvi um e-commerce relacionados a jogos utilizando o framework Adonisjs, que se baseia na arquitetura MVC.
-                    O projeto contém desde um crud de produtos(busca e paginação dos produtos) e usuários(níveis de usuário e admin), como também carrinho, 
-                    notificações utilizando ajax, integração com a API de pagamentos stripe, e também população do banco de dados pela a API da rawg.
-                </p>
-                <div class="tech-stack">
-                    <span>Desenvolvimento web</span> <span>TypeScript</span> <span>JavaScript</span> <span>Node</span>
-                    <span>HTML/CSS</span> <span>Banco de dados</span> <span>ORM</span>
-                </div>
-                <div class="links">
-                    <a href="https://github.com/PedroVSD/Ecommerc" target="_blank">Ver Código</a>
-                    <a href="https://youtu.be/LY023Wg-w5k">Demo Online</a>
-                </div>
-            </div>
-        </div>
-        <h2>Algoritmos</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Programação competitiva e algoritmos</h3>
-                <p>Parte referente ao meu estudo/projetos de estudo em algoritmos. O que me levou ao estudo para participar de maratonas de programação.
-                    Também há resoluções de alguns problemas do leetcode.
-                </p>
-                <div class="tech-stack">
-                    <span>Algoritmos</span> <span>Programação competitiva</span> <span>Estrutura de dados</span>
-                    <span>C++</span> <span>C#</span> <span>Python</span> <span>Programação dinâmica</span>
-                    <span>Lógica de programação</span> <span>Leet code</span> <span>Codeforce</span>
-                </div>
-                <div class="links">
-                    <a href="https://github.com/PedroVSD/Maratona" target="_blank">Ver Código</a>
+            <h2>Algoritmos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Programação competitiva e algoritmos</h3>
+                    <p>
+                        Parte referente ao meu estudo/projetos de estudo em
+                        algoritmos. O que me levou ao estudo para participar de
+                        maratonas de programação. Também há resoluções de alguns
+                        problemas do leetcode.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Algoritmos</span>
+                        <span>Programação competitiva</span>
+                        <span>Estrutura de dados</span> <span>C++</span>
+                        <span>C#</span> <span>Python</span>
+                        <span>Programação dinâmica</span>
+                        <span>Lógica de programação</span>
+                        <span>Leet code</span> <span>Codeforce</span>
+                    </div>
+                    <div class="links">
+                        <a
+                            href="https://github.com/PedroVSD/Maratona"
+                            target="_blank"
+                            >Ver Código</a
+                        >
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contato" class="container contact-section">
-        <h2>Pode entrar em contato</h2>
-        <p>Estou disponível para novas oportunidades e colaborações.</p>
-        <div class="social-links">
-            <a href="https://github.com/PedroVSD" target="_blank" class="btn-outline">GitHub</a>
-            <a href="https://www.linkedin.com/in/pedro-vsd" target="_blank" class="btn-outline">LinkedIn</a>
-            <a href="mailto:pedrovsd00@gmail.com" class="btn-outline">Email(gmail)</a>
-            <a href="mailto:pedrovsd@proton.me" class="btn-outline">Email(proton)</a>
-        </div>
-    </section>
+        <section id="contato" class="container contact-section">
+            <h2>Pode entrar em contato</h2>
+            <p>Estou disponível para novas oportunidades e colaborações.</p>
+            <div class="social-links">
+                <a
+                    href="https://github.com/PedroVSD"
+                    target="_blank"
+                    class="btn-outline"
+                    >GitHub</a
+                >
+                <a
+                    href="https://www.linkedin.com/in/pedro-vsd"
+                    target="_blank"
+                    class="btn-outline"
+                    >LinkedIn</a
+                >
+                <a href="mailto:pedrovsd00@gmail.com" class="btn-outline"
+                    >Email(gmail)</a
+                >
+                <a href="mailto:pedrovsd@proton.me" class="btn-outline"
+                    >Email(proton)</a
+                >
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2025 Pedro Vitor. Desenvolvido por mim. Obrigado pela visita. :)</p>
-    </footer>
-<script src="index.js"></script>
-</body>
+        <footer>
+            <p>
+                &copy; 2025 Pedro Vitor. Desenvolvido por mim. Obrigado pela
+                visita. :)
+            </p>
+        </footer>
+        <script src="index.js"></script>
+    </body>
 </html>
