@@ -17,15 +17,67 @@
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="https://drive.google.com/drive/folders/1KVaLb2bo9r-dl7FvZC98d-Il50STvRUP?usp=drive_link" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-user-icon lucide-file-user"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M16 22a4 4 0 0 0-8 0"/><circle cx="12" cy="15" r="3"/></svg></a></li>
+                <li>
+                    <a
+                        href="https://drive.google.com/drive/folders/1KVaLb2bo9r-dl7FvZC98d-Il50STvRUP?usp=drive_link"
+                        target="_blank"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-file-user-icon lucide-file-user"
+                        >
+                            <path
+                                d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+                            />
+                            <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+                            <path d="M16 22a4 4 0 0 0-8 0" />
+                            <circle cx="12" cy="15" r="3" /></svg
+                    ></a>
+                </li>
             </ul>
-            <button
-                id="theme-toggle"
-                class="theme-btn"
-                aria-label="Alternar Tema"
-            >
-                <span class="icon"
-                    ><svg
+            <div class="nav-actions">
+                <button
+                    id="theme-toggle"
+                    class="theme-btn"
+                    aria-label="Alternar Tema"
+                >
+                    <span class="icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-sun-moon-icon lucide-sun-moon"
+                        >
+                            <path d="M12 2v2" />
+                            <path
+                                d="M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715"
+                            />
+                            <path d="M16 12a4 4 0 0 0-4-4" />
+                            <path d="m19 5-1.256 1.256" />
+                            <path d="M20 12h2" />
+                        </svg>
+                    </span>
+                </button>
+
+                <button
+                    id="hamburger-btn"
+                    class="hamburger-btn"
+                    aria-label="Menu"
+                >
+                    <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
@@ -35,17 +87,14 @@
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        class="lucide lucide-sun-moon-icon lucide-sun-moon"
+                        class="lucide lucide-menu"
                     >
-                        <path d="M12 2v2" />
-                        <path
-                            d="M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715"
-                        />
-                        <path d="M16 12a4 4 0 0 0-4-4" />
-                        <path d="m19 5-1.256 1.256" />
-                        <path d="M20 12h2" /></svg
-                ></span>
-            </button>
+                        <line x1="4" x2="20" y1="12" y2="12" />
+                        <line x1="4" x2="20" y1="6" y2="6" />
+                        <line x1="4" x2="20" y1="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
         </nav>
 
         <header id="sobre" class="hero">
