@@ -1,33 +1,30 @@
-/* =========================================
-   1. VARIÁVEIS E RESET (CONFIGURAÇÃO DOS TEMAS)
-   ========================================= */
 :root {
-    /* --- TEMA CLARO (Padrão) --- */
     --bg-color: #ffffff;
     --text-color: #1a1a1a;
-    --text-secondary: #555555;
-    --accent-color: #ffc800;
-    --card-bg: #f9f9f9;
-    --card-hover-bg: #ffffff;
-    --border-color: #e5e5e5;
-    --nav-bg: rgba(255, 255, 255, 0.95);
-    --btn-text-on-accent: #000000;
-    --shadow: rgba(0, 0, 0, 0.05);
-
+    --text-secondary: #57606a;
+    --accent-color: #0077ff; /* Azul vibrante para contraste no branco */
+    --card-bg: #f6f8fa;
+    --card-hover-bg: #f0f2f5;
+    --border-color: #d0d7de;
+    --nav-bg: #ffffff;
+    --btn-text-on-accent: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
     --font-main: "Inter", sans-serif;
+    --sombra-btn: 0 5px 15px rgba(0, 119, 255, 0.4);
 }
 
 [data-theme="dark"] {
-    --bg-color: #303841;
-    --text-color: #f5f5f5;
-    --text-secondary: #cccccc;
-    --accent-color: #ffc800;
-    --card-bg: #3a4750;
-    --card-hover-bg: #303841;
-    --border-color: #555555;
-    --nav-bg: #303841;
-    --btn-text-on-accent: #f9f9f9;
-    --shadow: rgba(0, 0, 0, 0.3);
+    --bg-color: #0a0e14; /* Azul marinho ultra escuro */
+    --text-color: #e6edf3;
+    --text-secondary: #9da5b4;
+    --accent-color: #00f2ff; /* Ciano vibrante */
+    --card-bg: #161b22; /* Leve contraste com o fundo */
+    --card-hover-bg: #1c2128;
+    --border-color: #30363d;
+    --nav-bg: #0d1117;
+    --btn-text-on-accent: #0a0e14; /* Texto escuro sobre o ciano para leitura */
+    --shadow: rgba(0, 0, 0, 0.6);
+    --sombra-btn: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
 * {
@@ -228,7 +225,7 @@ a {
 .highlight {
     /* Usei var(--accent-color) dentro do gradiente */
     background: linear-gradient(
-        120deg,
+        200deg,
         transparent 6%,
         transparent 0%,
         var(--accent-color) 0%,
@@ -266,7 +263,7 @@ a {
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 200, 0, 0.4);
+    box-shadow: var(--sombra-btn);
 }
 
 .btn-outline {
@@ -290,24 +287,89 @@ a {
     justify-content: center;
 }
 
+/* O Container Base - Agora invisível, servindo apenas para centralizar */
 .img-placeholder {
     width: 350px;
     height: 350px;
-    background: linear-gradient(45deg, var(--accent-color), #fbbf24);
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    animation: morph 8s ease-in-out infinite;
-    box-shadow: 0 10px 40px var(--shadow);
+    background-color: transparent; /* Fundo transparente */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Removidos: border, border-radius, box-shadow e overflow */
 }
 
-@keyframes morph {
+/* O Núcleo (A fonte de processamento) */
+.core {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--accent-color);
+    animation: pulseCore 3s ease-in-out infinite alternate;
+    z-index: 10;
+}
+
+/* Os "Trilhos" das Órbitas */
+.orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid var(--text-secondary);
+    opacity: 0.3;
+    animation: spinOrbit linear infinite;
+}
+
+/* Configurações de tamanho e velocidade de cada órbita */
+.orbit-1 {
+    width: 140px;
+    height: 140px;
+    animation-duration: 8s;
+}
+
+.orbit-2 {
+    width: 240px;
+    height: 240px;
+    border-style: dashed;
+    animation-duration: 15s;
+    animation-direction: reverse;
+}
+
+/* Os "Pontos de Dados" que viajam pelas órbitas */
+.orbit::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* --- ANIMAÇÕES --- */
+
+@keyframes pulseCore {
     0% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-    50% {
-        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        transform: scale(0.9);
+        box-shadow: 0 0 10px var(--accent-color);
     }
     100% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: scale(1.2);
+        box-shadow:
+            0 0 25px var(--accent-color),
+            0 0 40px rgba(0, 119, 255, 0.2);
+    }
+}
+
+@keyframes spinOrbit {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 
