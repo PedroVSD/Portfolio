@@ -14,7 +14,7 @@
         <nav class="navbar">
             <div class="logo">Pedro Vitor</div>
             <ul class="nav-links">
-                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#sobre" data-i18n="navbar.about">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
                 <li>
@@ -153,6 +153,31 @@
             <h2>Meus Projetos</h2>
             <h2>Ciência de dados</h2>
             <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Sistema de recomendação</h3>
+                    <p>
+                        Diferente da outra implementação, essa implementação é
+                        mais manual. O projeto se trata de uma implementação de
+                        dois métodos. Um baseado em memória utilizando o KNN e o
+                        outro é a implementação do model based utilizando o SVD
+                        by funk.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span> <span>Aprendizado de máquina</span>
+                        <span>KNN</span> <span>SVD by funk</span>
+                        <span>Pandas</span> <span>Numpy</span>
+                    </div>
+                    <div class="links">
+                        <a
+                            href="https://github.com/PedroVSD/sistema-de-recomendacao"
+                            target="_blank"
+                        >
+                            Github
+                        </a>
+                        <a href="#">Codeberg</a>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <h3>Sistema de recomendação de filmes</h3>
                     <p>
@@ -301,10 +326,16 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Rede neural para regressão(linear)</h3>
-                    <p>Rede neural para regressão</p>
+                    <p>
+                        Construção de uma MLP simples que visa aprender a
+                        representação de uma regressão linear
+                    </p>
                     <div class="tech-stack">
                         <span>Python</span>
                         <span>Pytorch</span>
+                        <span>Numpy</span>
+                        <span>Pandas</span>
+                        <span>Deep learning</span>
                     </div>
                     <div class="links">
                         <a
@@ -318,10 +349,16 @@
                 </div>
                 <div class="project-card">
                     <h3>Rede neural recorrente</h3>
-                    <p>Rede neural recorrente para classificação de imagem</p>
+                    <p>
+                        Implementação em pytorch de uma rede neural recorrente
+                        para classificação de imagem.
+                    </p>
                     <div class="tech-stack">
                         <span>Python</span>
                         <span>Pytorch</span>
+                        <span>Numpy</span>
+                        <span>Pandas</span>
+                        <span>Deep learning</span>
                     </div>
                     <div class="links">
                         <a
@@ -336,12 +373,17 @@
                 <div class="project-card">
                     <h3>Rede neural recorrente(encoders)</h3>
                     <p>
-                        Rede neural utilizando auto encoders para detecção de
-                        anomalias
+                        Implementação de auto encoders para detecção de
+                        anomalias em imagens. O objetivo foi ir alterando
+                        variáveis da arquitetura para um melhor resultado na
+                        detecção de anomalias.
                     </p>
                     <div class="tech-stack">
                         <span>Python</span>
                         <span>Pytorch</span>
+                        <span>Numpy</span>
+                        <span>Pandas</span>
+                        <span>Deep learning</span>
                     </div>
                     <div class="links">
                         <a
@@ -357,11 +399,15 @@
                     <h3>Rede neural LSTM</h3>
                     <p>
                         Rede neural de arquitetura LSTM para previsão de uma
-                        série temporal
+                        série temporal. No projeto a LSTM foi treinada para
+                        aprender o comportamento do preço do bitcoin.
                     </p>
                     <div class="tech-stack">
                         <span>Python</span>
                         <span>Pytorch</span>
+                        <span>Numpy</span>
+                        <span>Pandas</span>
+                        <span>Deep learning</span>
                     </div>
                     <div class="links">
                         <a
