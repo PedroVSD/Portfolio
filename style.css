@@ -50,7 +50,7 @@ body {
 
 /* Utilitários */
 .container {
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 0rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
