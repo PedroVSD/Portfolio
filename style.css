@@ -410,17 +410,72 @@ a {
 /* =========================================
    4. PROJETOS
    ========================================= */
+
+/* Título Principal (Meus Projetos) - Centralizado e totalmente sublinhado */
+#projetos > h2:first-of-type {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+#projetos > h2:first-of-type::after {
+    content: "";
+    display: block;
+    width: 100%; /* Sublinhado completo */
+    height: 4px;
+    background-color: var(--accent-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+
+/* Títulos das Seções Específicas - Alinhados à esquerda e totalmente sublinhados */
+#projetos h2:not(:first-of-type) {
+    text-align: left;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+#projetos h2:not(:first-of-type)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Variáveis de cores por categoria */
+:root {
+    --color-ciencia: #00e676;     /* Verde */
+    --color-redes: #9c27b0;       /* Roxo */
+    --color-dev: #ff9800;         /* Laranja */
+    --color-algoritmos: #ff4081;  /* Rosa/Vermelho */
+}
+
+/* --- Cores dos Sublinhados --- */
+#projetos h2:nth-of-type(2)::after { background-color: var(--color-ciencia); }
+#projetos h2:nth-of-type(3)::after { background-color: var(--color-redes); }
+#projetos h2:nth-of-type(4)::after { background-color: var(--color-dev); }
+#projetos h2:nth-of-type(5)::after { background-color: var(--color-algoritmos); }
+
+/* --- Grid e Cards Base --- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
 }
 
 .project-card {
-    background: var(--card-bg); /* Variável correta */
+    background: var(--card-bg);
     padding: 2.5rem;
     border-radius: 8px;
-    border: 1px solid var(--border-color);
+    border: 1px solid transparent;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -428,14 +483,18 @@ a {
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--accent-color);
-    background: var(
-        --card-hover-bg
-    ); /* Adapta ao tema (Branco no claro, Cinza no escuro) */
-    box-shadow: 0 15px 30px var(--shadow);
+    transform: translateY(-4px);
+    background: var(--card-hover-bg);
+    box-shadow: 0 10px 25px var(--shadow);
 }
 
+/* --- Bordas no Hover Dinâmicas por Seção --- */
+.ciencia-dados .project-card:hover { border-color: var(--color-ciencia); }
+.redes-neurais .project-card:hover { border-color: var(--color-redes); }
+.desenvolvimento .project-card:hover { border-color: var(--color-dev); }
+.algoritmos .project-card:hover { border-color: var(--color-algoritmos); }
+
+/* --- Elementos Internos dos Cards --- */
 .project-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -456,17 +515,13 @@ a {
 }
 
 .tech-stack span {
-    background: var(--bg-color); /* Fundo da tag adapta ao tema */
+    background: var(--bg-color);
     border: 1px solid var(--border-color);
     color: var(--text-color);
     padding: 0.3rem 0.8rem;
     border-radius: 4px;
     font-size: 0.8rem;
     font-weight: 600;
-}
-
-.project-card:hover .tech-stack span {
-    border-color: var(--accent-color);
 }
 
 .links {
@@ -479,15 +534,38 @@ a {
     color: var(--text-color);
     font-size: 0.9rem;
     font-weight: 700;
-    border-bottom: 2px solid var(--accent-color);
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-.links a:hover {
-    background-color: var(--accent-color);
-    color: var(--btn-text-on-accent); /* Texto legível no highlight */
-    padding: 2px;
-    border-radius: 4px;
+/* Estilo padrão da linha abaixo dos links dos cards */
+.ciencia-dados .links a { border-bottom: 2px solid var(--color-ciencia); }
+.redes-neurais .links a { border-bottom: 2px solid var(--color-redes); }
+.desenvolvimento .links a { border-bottom: 2px solid var(--color-dev); }
+.algoritmos .links a { border-bottom: 2px solid var(--color-algoritmos); }
+
+/* --- Hover nos Botões/Links por Seção --- */
+.ciencia-dados .links a:hover {
+    background-color: var(--color-ciencia);
+    color: #000000;
 }
+
+.redes-neurais .links a:hover {
+    background-color: var(--color-redes);
+    color: #ffffff;
+}
+
+.desenvolvimento .links a:hover {
+    background-color: var(--color-dev);
+    color: #000000;
+}
+
+.algoritmos .links a:hover {
+    background-color: var(--color-algoritmos);
+    color: #ffffff;
+}
+
 
 /* =========================================
    5. CONTATO E FOOTER
@@ -495,10 +573,28 @@ a {
 .contact-section {
     text-align: center;
     padding-bottom: 6rem;
-    background: var(--card-bg); /* Fundo sutilmente diferente */
+    background: var(--bg-color); /* Fundo limpo (mesmo tom do site) */
     padding-top: 4rem;
-    border-top: 1px solid var(--border-color);
-    border-radius: 4px;
+    border: none; /* Removido fundo e borda superior */
+}
+
+/* Título da seção de contato com sublinhado completo */
+.contact-section h2 {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.contact-section h2::after {
+    content: "";
+    display: block;
+    width: 100%; /* Sublinhado completo */
+    height: 4px;
+    background-color: var(--accent-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
 }
 
 .contact-section p {
@@ -512,7 +608,6 @@ a {
     gap: 1.5rem;
 }
 
-/* Botões sociais Outline */
 .social-links .btn-outline {
     border-color: var(--text-color);
     color: var(--text-color);
@@ -624,4 +719,3 @@ footer {
         padding-top: 140px;
     }
 }
-É nao funcionou
