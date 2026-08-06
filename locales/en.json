@@ -6,7 +6,7 @@
   },
   "hero": {
     "greeting": "Hello, my name is Pedro Vitor",
-    "bio": "I am a Computer Science student interested in data analysis, data engineering, and software development.",
+    "bio": "I am a Computer Science student with an interest in Data science/engineering. I also like the software engineering part itself, the programming, architecture, and building software part. I also study MLOPs and DEVOPs.",
     "en_notice": "Hello, and thanks for the visit. If you do not know portuguese, you can translate to english by clicking in the translate button on the menu.",
     "btn_projects": "View Projects",
     "btn_contact": "Get in touch"

@@ -6,7 +6,7 @@
   },
   "hero": {
     "greeting": "Olá, me chamo Pedro Vitor",
-    "bio": "Sou estudante de Ciência da Computação com interesse em análise de dados, engenharia de dados e desenvolvimento de software.",
+    "bio": "Sou estudante de Ciência da Computação com interesse em Ciência/engenharia de dados. Também gosto da parte de engenharia de software em si, a parte de programação, arquitetura e construção de um software. Além disso estudo MLOPs e DEVOPs.",
     "en_notice": "Hello, and thanks for the visit. If you do not know portuguese, you can translate to english by clicking in the translate button on the menu.",
     "btn_projects": "Ver Projetos",
     "btn_contact": "Entrar em contato"
