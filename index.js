@@ -76,10 +76,9 @@ async function loadLanguage(language) {
 }
 
 function toggleLanguage() {
-  const atual = localStorage.getItem("language") || getAtutalLang();
-
+  const atual = getCurrentLanguage();
   const proximo = atual === "pt" ? "en" : "pt";
   loadLanguage(proximo);
 }
 
-loadLanguage(getAtutalLang());
+loadLanguage(getCurrentLanguage());

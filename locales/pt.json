@@ -1,8 +1,109 @@
 {
   "navbar": {
-    "logo": "Pedro Vitor",
     "about": "Sobre",
     "projects": "Projetos",
     "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, me chamo Pedro Vitor",
+    "bio": "Sou estudante de Ciência da Computação com interesse em análise de dados, engenharia de dados e desenvolvimento de software.",
+    "en_notice": "Hello, and thanks for the visit. If you do not know portuguese, you can translate to english by clicking in the translate button on the menu.",
+    "btn_projects": "Ver Projetos",
+    "btn_contact": "Entrar em contato"
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "data_science": "Ciência de dados",
+    "neural_networks": "Redes Neurais",
+    "software_engineering": "Engenharia de software",
+    "algorithms": "Algoritmos",
+    "rec_system": {
+      "title": "Sistema de recomendação",
+      "desc": "Diferente da outra implementação, essa implementação é mais manual. O projeto se trata de uma implementação de dois métodos. Um baseado em memória utilizando o KNN e o outro é a implementação do model based utilizando o SVD by funk."
+    },
+    "movie_rec": {
+      "title": "Sistema de recomendação de filmes",
+      "desc": "Um simples sistema de recomendação de filmes. Onde o usuário escolhe o número de filmes que deseja avaliar e o sistema recomenda uma lista de filmes que ele possivelmente irá gostar."
+    },
+    "mini_course": {
+      "title": "Mini curso de aprendizado de máquina.",
+      "desc": "Ministrei um mini curso de introdução a aprendizado de máquina. O curso cobriu assuntos como tratamento dos dados, a parte estatística e aplicação dos algoritmos em si."
+    },
+    "lin_reg": {
+      "title": "Regressão linear",
+      "desc": "Desenvolvimento do algoritmo de regressão linear de forma iterativa. Os dados são tratados, desde a verificação de valores faltantes até a normalização de dados numéricos."
+    },
+    "nn_class": {
+      "title": "Classificação com redes neurais",
+      "desc": "Um sistema de rede neural densa treinada para resolver um problema de classificação"
+    },
+    "data_analysis": {
+      "title": "Análise de dados",
+      "desc": "Realizei uma análise de um conjunto de dados do IBGE. E a partir disso descobrir padrões e datalhes. Utilizei desde técnicas de machine learning como mineração de dados."
+    },
+    "assoc_rules": {
+      "title": "Regras de associação",
+      "desc": "Nesse projeto realizei uma análise do dataset utilizando nesta análise as regras de associação, como Support ,Confidence ,Lift ,Conviction. E utilizando essas regras, analisei o que mais levava um usuário ao churn."
+    },
+    "clustering": {
+      "title": "Clustering",
+      "desc": "Analisei um dataset que contia informações sobre alunos do ensino médio. Foi realizada ETL dos dados e utilizando o PCA e o Kprototypes,o agrupamento foi baseado na correlação dos dados. Onde os resultados mostravam onde deveria ser aplicadas melhorias, correções e pontos de atenção."
+    },
+    "nn_linreg": {
+      "title": "Rede neural para regressão(linear)",
+      "desc": "Construção de uma MLP simples que visa aprender a representação de uma regressão linear"
+    },
+    "rnn": {
+      "title": "Rede neural recorrente",
+      "desc": "Implementação em pytorch de uma rede neural recorrente para classificação de imagem."
+    },
+    "encoders": {
+      "title": "Rede neural recorrente(encoders)",
+      "desc": "Implementação de auto encoders para detecção de anomalias em imagens. O objetivo foi ir alterando variáveis da arquitetura para um melhor resultado na detecção de anomalias."
+    },
+    "lstm": {
+      "title": "Rede neural LSTM",
+      "desc": "Rede neural de arquitetura LSTM para previsão de uma série temporal. No projeto a LSTM foi treinada para aprender o comportamento do preço do bitcoin."
+    },
+    "f1_vrum": {
+      "title": "F1 vrum-vrum",
+      "desc": "Um projeto para estudar mais a fundo as APIS. Decidi juntar o mundo da F1 com programação. Mais para frente também terá funcionalidades relacionadas a parte de dados, como previsão e dados estatisticos."
+    },
+    "ecommerce": {
+      "title": "E-commerce de jogos",
+      "desc": "Desenvolvi um e-commerce relacionados a jogos utilizando o framework Adonisjs, que se baseia na arquitetura MVC. O projeto contém desde um crud de produtos(busca e paginação dos produtos) e usuários(níveis de usuário e admin), como também carrinho, notificações utilizando ajax, integração com a API de pagamentos stripe, e também população do banco de dados pela a API da rawg."
+    },
+    "comp_prog": {
+      "title": "Programação competitiva e algoritmos",
+      "desc": "Parte referente ao meu estudo/projetos de estudo em algoritmos. O que me levou ao estudo para participar de maratonas de programação. Também há resoluções de alguns problemas do leetcode."
+    }
+  },
+  "about_me": {
+    "title": "Um pouco sobre mim",
+    "subtitle": "Um pouco sobre meu aprendizado",
+    "desc": "Durante a faculdade comecei meus estudos pela linguagem C. Depois disso ao estudar POO aprendi sobre o conceito utilizando a linguagem JAVA, isso vendo polimorfismo, herança e encapsulamento. Também estudei um pouco de C++ para programação competitiva. Como há no portifólio também já utilizei a linguagem TypeScript para construir um e-commerc com NodeJS(utilizando agentes). Atualmente tenho focado mais em python, Golang e SQL. Onde tenho estudo mais a parte prática, um pouco de modelagem e Querys(uma vez que as aulas de banco de dados não foram lá essas coisas) por conta do caminho que pretendo seguir, Ciência de dados/MLOps. Utilizo linux em meu laptop para programar e também para aprendizado, aprendizado que envolve docker, terminal etc."
+  },
+  "contact": {
+    "title": "Pode entrar em contato",
+    "desc": "Estou disponível para novas oportunidades e colaborações."
+  },
+  "tags": {
+    "machine_learning": "Aprendizado de máquina",
+    "statistics": "Estatística",
+    "data_mining": "Mineração de dados",
+    "web_dev": "Desenvolvimento web",
+    "database": "Banco de dados",
+    "algorithms": "Algoritmos",
+    "comp_prog": "Programação competitiva",
+    "data_structures": "Estrutura de dados",
+    "dyn_prog": "Programação dinâmica",
+    "prog_logic": "Lógica de programação",
+    "data": "Dados"
+  },
+  "links": {
+    "demo": "Demo Online"
+  },
+  "footer": {
+    "text": "2025 Pedro Vitor. Obrigado pela visita. :)"
   }
 }

@@ -1,8 +1,109 @@
 {
   "navbar": {
-    "logo": "Pedro Vitor",
     "about": "About",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, my name is Pedro Vitor",
+    "bio": "I am a Computer Science student interested in data analysis, data engineering, and software development.",
+    "en_notice": "Hello, and thanks for the visit. If you do not know portuguese, you can translate to english by clicking in the translate button on the menu.",
+    "btn_projects": "View Projects",
+    "btn_contact": "Get in touch"
+  },
+  "projects": {
+    "title": "My Projects",
+    "data_science": "Data Science",
+    "neural_networks": "Neural Networks",
+    "software_engineering": "Software Engineering",
+    "algorithms": "Algorithms",
+    "rec_system": {
+      "title": "Recommender System",
+      "desc": "Unlike the other implementation, this one is more manual. The project consists of an implementation of two methods. One memory-based using KNN and the other is a model-based implementation using SVD by funk."
+    },
+    "movie_rec": {
+      "title": "Movie Recommender System",
+      "desc": "A simple movie recommender system. The user chooses the number of movies they want to evaluate and the system recommends a list of movies they might like."
+    },
+    "mini_course": {
+      "title": "Machine Learning Short Course",
+      "desc": "I taught a short introductory course on machine learning. The course covered topics such as data preprocessing, statistical fundamentals, and practical algorithm application."
+    },
+    "lin_reg": {
+      "title": "Linear Regression",
+      "desc": "Iterative development of a linear regression algorithm. The data is processed, ranging from missing value checks to numerical data normalization."
+    },
+    "nn_class": {
+      "title": "Classification with Neural Networks",
+      "desc": "A dense neural network system trained to solve a classification problem."
+    },
+    "data_analysis": {
+      "title": "Data Analysis",
+      "desc": "Performed data analysis on an IBGE dataset to discover patterns and details. Applied techniques ranging from machine learning to data mining."
+    },
+    "assoc_rules": {
+      "title": "Association Rules",
+      "desc": "In this project, I performed a dataset analysis using association rules, such as Support, Confidence, Lift, and Conviction, to identify what factors contributed most to user churn."
+    },
+    "clustering": {
+      "title": "Clustering",
+      "desc": "Analyzed a dataset containing information about high school students. Data ETL was performed, and using PCA and K-Prototypes, grouping was based on data correlation to highlight areas needing improvement, corrections, and key attention points."
+    },
+    "nn_linreg": {
+      "title": "Neural Network for Linear Regression",
+      "desc": "Building a simple MLP aimed at learning the representation of a linear regression."
+    },
+    "rnn": {
+      "title": "Recurrent Neural Network",
+      "desc": "PyTorch implementation of a recurrent neural network for image classification."
+    },
+    "encoders": {
+      "title": "Recurrent Neural Network (Encoders)",
+      "desc": "Implementation of autoencoders for image anomaly detection. The objective was to tweak architecture variables to achieve better anomaly detection results."
+    },
+    "lstm": {
+      "title": "LSTM Neural Network",
+      "desc": "LSTM neural network architecture for time series forecasting. In this project, the LSTM was trained to learn Bitcoin price behavior."
+    },
+    "f1_vrum": {
+      "title": "F1 vrum-vrum",
+      "desc": "A project built to study APIs more deeply by combining the world of F1 with programming. Future plans include data-related features like forecasting and statistical insights."
+    },
+    "ecommerce": {
+      "title": "Gaming E-commerce",
+      "desc": "Developed a gaming e-commerce using the AdonisJS framework based on MVC architecture. The project includes product CRUD (search and pagination), user roles (user and admin levels), a shopping cart, AJAX notifications, Stripe payment integration, and database seeding via the RAWG API."
+    },
+    "comp_prog": {
+      "title": "Competitive Programming & Algorithms",
+      "desc": "Refers to my study and projects focused on algorithms, which led me to prepare for programming marathons. Also includes solutions for several LeetCode problems."
+    }
+  },
+  "about_me": {
+    "title": "A Little About Me",
+    "subtitle": "A Little About My Learning Journey",
+    "desc": "During university, I began my studies with C. Later, while studying OOP, I learned core concepts using JAVA, covering polymorphism, inheritance, and encapsulation. I also studied C++ for competitive programming. As shown in the portfolio, I have used TypeScript to build an e-commerce with NodeJS (using agents). Currently, I am focusing more on Python, Golang, and SQL—practicing hands-on skills, modeling, and queries—to pursue my desired career path in Data Science / MLOps. I use Linux on my laptop for programming and learning, including Docker, terminal usage, and more."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "desc": "I am available for new opportunities and collaborations."
+  },
+  "tags": {
+    "machine_learning": "Machine Learning",
+    "statistics": "Statistics",
+    "data_mining": "Data Mining",
+    "web_dev": "Web Development",
+    "database": "Database",
+    "algorithms": "Algorithms",
+    "comp_prog": "Competitive Programming",
+    "data_structures": "Data Structures",
+    "dyn_prog": "Dynamic Programming",
+    "prog_logic": "Programming Logic",
+    "data": "Data"
+  },
+  "links": {
+    "demo": "Live Demo"
+  },
+  "footer": {
+    "text": "2025 Pedro Vitor. Thanks for visiting. :)"
   }
 }
