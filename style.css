@@ -2,7 +2,7 @@
     --bg-color: #ffffff;
     --text-color: #1a1a1a;
     --text-secondary: #57606a;
-    --accent-color: #0077ff; /* Azul vibrante para contraste no branco */
+    --accent-color: #0077ff;
     --card-bg: #f6f8fa;
     --card-hover-bg: #f0f2f5;
     --border-color: #d0d7de;
@@ -11,18 +11,24 @@
     --shadow: rgba(0, 0, 0, 0.1);
     --font-main: "Inter", sans-serif;
     --sombra-btn: 0 5px 15px rgba(0, 119, 255, 0.4);
+
+    /* Cores das seções de projetos */
+    --color-ciencia: #00e676;
+    --color-redes: #9c27b0;
+    --color-dev: #ff9800;
+    --color-algoritmos: #ff4081;
 }
 
 [data-theme="dark"] {
-    --bg-color: #0a0e14; /* Azul marinho ultra escuro */
+    --bg-color: #0a0e14;
     --text-color: #e6edf3;
     --text-secondary: #9da5b4;
-    --accent-color: #00f2ff; /* Ciano vibrante */
-    --card-bg: #161b22; /* Leve contraste com o fundo */
+    --accent-color: #00f2ff;
+    --card-bg: #161b22;
     --card-hover-bg: #1c2128;
     --border-color: #30363d;
     --nav-bg: #0d1117;
-    --btn-text-on-accent: #0a0e14; /* Texto escuro sobre o ciano para leitura */
+    --btn-text-on-accent: #0a0e14;
     --shadow: rgba(0, 0, 0, 0.6);
     --sombra-btn: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
@@ -43,14 +49,12 @@ body {
     font-family: var(--font-main);
     line-height: 1.6;
     overflow-x: hidden;
-    transition:
-        background-color 0.3s ease,
-        color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Utilitários */
 .container {
-    padding: 4rem 2rem 0rem 2rem;
+    padding: 4rem 2rem 0;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -62,7 +66,6 @@ h2 {
     color: var(--text-color);
 }
 
-/* Detalhe amarelo no título */
 h2::after {
     content: "";
     display: block;
@@ -120,11 +123,9 @@ a {
     border: none;
     color: var(--text-secondary);
     cursor: pointer;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     position: relative;
     padding: 0 0 5px;
     transition: color 0.3s ease;
@@ -176,50 +177,37 @@ a {
     color: var(--text-color);
 }
 
-/*Botão de Troca de Tema */
-.theme-btn {
-    background: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-    padding: 0.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    transition: 0.3s;
-}
-
-.theme-btn:hover {
-    background: var(--bg-color);
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-}
-
 .nav-actions {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
+.theme-btn,
 .hamburger-btn {
-    display: none; /* Escondido no PC */
     background: transparent;
     border: 1px solid var(--border-color);
     color: var(--text-color);
     padding: 0.5rem;
     border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     transition: 0.3s;
-    align-items: center;
-    justify-content: center;
 }
 
+.theme-btn {
+    font-size: 1.2rem;
+}
+
+.hamburger-btn {
+    display: none;
+}
+
+.theme-btn:hover,
 .hamburger-btn:hover {
     background: var(--bg-color);
     border-color: var(--accent-color);
@@ -255,18 +243,15 @@ a {
     color: var(--text-color);
 }
 
-/* Destaque no texto */
 .highlight {
-    /* Usei var(--accent-color) dentro do gradiente */
     background: linear-gradient(
         200deg,
-        transparent 6%,
         transparent 0%,
         var(--accent-color) 0%,
         var(--accent-color) 90%,
         transparent 90%
     );
-    color: var(--btn-text-on-accent); /* Garante leitura dependendo do fundo */
+    color: var(--btn-text-on-accent);
 }
 
 .hero-text p {
@@ -281,17 +266,14 @@ a {
     gap: 1rem;
 }
 
-/* Botões */
 .btn {
     display: inline-block;
     background: var(--accent-color);
-    color: var(--btn-text-on-accent); /* Texto adapta ao tema */
+    color: var(--btn-text-on-accent);
     padding: 0.8rem 2rem;
     border-radius: 4px;
     font-weight: 700;
-    transition:
-        transform 0.2s,
-        box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
     border: 2px solid var(--accent-color);
 }
 
@@ -302,38 +284,33 @@ a {
 
 .btn-outline {
     display: inline-block;
-    border: 2px solid var(--text-color); /* Borda segue a cor do texto */
+    border: 2px solid var(--text-color);
     padding: 0.8rem 2rem;
     border-radius: 4px;
-    color: var(--text-color); /* Texto segue a cor do tema */
+    color: var(--text-color);
     font-weight: 700;
 }
 
 .btn-outline:hover {
-    background: var(--text-color);
-    color: var(--bg-color); /* Inverte as cores ao passar o mouse */
-    border-color: var(--text-color);
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--btn-text-on-accent);
 }
 
-/* Imagem Hero */
 .hero-image {
     display: flex;
     justify-content: center;
 }
 
-/* O Container Base - Agora invisível, servindo apenas para centralizar */
 .img-placeholder {
     width: 350px;
     height: 350px;
-    background-color: transparent; /* Fundo transparente */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Removidos: border, border-radius, box-shadow e overflow */
 }
 
-/* O Núcleo (A fonte de processamento) */
 .core {
     position: absolute;
     width: 24px;
@@ -345,7 +322,6 @@ a {
     z-index: 10;
 }
 
-/* Os "Trilhos" das Órbitas */
 .orbit {
     position: absolute;
     border-radius: 50%;
@@ -354,7 +330,6 @@ a {
     animation: spinOrbit linear infinite;
 }
 
-/* Configurações de tamanho e velocidade de cada órbita */
 .orbit-1 {
     width: 140px;
     height: 140px;
@@ -369,7 +344,6 @@ a {
     animation-direction: reverse;
 }
 
-/* Os "Pontos de Dados" que viajam pelas órbitas */
 .orbit::before {
     content: "";
     position: absolute;
@@ -383,8 +357,6 @@ a {
     box-shadow: 0 0 10px var(--accent-color);
 }
 
-/* --- ANIMAÇÕES --- */
-
 @keyframes pulseCore {
     0% {
         transform: scale(0.9);
@@ -392,9 +364,7 @@ a {
     }
     100% {
         transform: scale(1.2);
-        box-shadow:
-            0 0 25px var(--accent-color),
-            0 0 40px rgba(0, 119, 255, 0.2);
+        box-shadow: 0 0 25px var(--accent-color), 0 0 40px rgba(0, 119, 255, 0.2);
     }
 }
 
@@ -411,7 +381,7 @@ a {
    4. PROJETOS
    ========================================= */
 
-/* Título Principal (Meus Projetos) - Centralizado e totalmente sublinhado */
+/* Título Geral */
 #projetos > h2:first-of-type {
     text-align: center;
     margin-bottom: 3rem;
@@ -422,7 +392,7 @@ a {
 #projetos > h2:first-of-type::after {
     content: "";
     display: block;
-    width: 100%; /* Sublinhado completo */
+    width: 100%;
     height: 4px;
     background-color: var(--accent-color);
     position: absolute;
@@ -431,7 +401,7 @@ a {
     margin: 0;
 }
 
-/* Títulos das Seções Específicas - Alinhados à esquerda e totalmente sublinhados */
+/* Títulos por Seção */
 #projetos h2:not(:first-of-type) {
     text-align: left;
     margin-bottom: 2rem;
@@ -449,21 +419,17 @@ a {
     left: 0;
 }
 
-/* Variáveis de cores por categoria */
-:root {
-    --color-ciencia: #00e676;     /* Verde */
-    --color-redes: #9c27b0;       /* Roxo */
-    --color-dev: #ff9800;         /* Laranja */
-    --color-algoritmos: #ff4081;  /* Rosa/Vermelho */
-}
-
-/* --- Cores dos Sublinhados --- */
 #projetos h2:nth-of-type(2)::after { background-color: var(--color-ciencia); }
 #projetos h2:nth-of-type(3)::after { background-color: var(--color-redes); }
 #projetos h2:nth-of-type(4)::after { background-color: var(--color-dev); }
 #projetos h2:nth-of-type(5)::after { background-color: var(--color-algoritmos); }
 
-/* --- Grid e Cards Base --- */
+/* Mapeamento de cor dinâmica por seção nos cards */
+.ciencia-dados { --card-accent: var(--color-ciencia); }
+.redes-neurais { --card-accent: var(--color-redes); }
+.desenvolvimento { --card-accent: var(--color-dev); }
+.algoritmos { --card-accent: var(--color-algoritmos); }
+
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -471,15 +437,17 @@ a {
     margin-bottom: 3.5rem;
 }
 
+/* Card Base */
 .project-card {
     background: var(--card-bg);
     padding: 2.5rem;
     border-radius: 8px;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--card-accent, var(--accent-color));
 }
 
 .project-card:hover {
@@ -488,13 +456,25 @@ a {
     box-shadow: 0 10px 25px var(--shadow);
 }
 
-/* --- Bordas no Hover Dinâmicas por Seção --- */
-.ciencia-dados .project-card:hover { border-color: var(--color-ciencia); }
-.redes-neurais .project-card:hover { border-color: var(--color-redes); }
-.desenvolvimento .project-card:hover { border-color: var(--color-dev); }
-.algoritmos .project-card:hover { border-color: var(--color-algoritmos); }
+/* Animações de Borda no Hover */
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    border: 1px solid var(--card-accent, var(--accent-color));
+    border-left: none;
+    clip-path: inset(0 100% 0 0);
+    pointer-events: none;
+    transition: clip-path 0.4s ease-in-out;
+}
 
-/* --- Elementos Internos dos Cards --- */
+.project-card:hover::before {
+    clip-path: inset(0 0 0 0);
+}
+.project-card:hover::after { height: 100%; }
+
+/* Conteúdo do Card */
 .project-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -537,48 +517,23 @@ a {
     padding: 2px 4px;
     border-radius: 4px;
     transition: all 0.3s ease;
+    border-bottom: 2px solid var(--card-accent, var(--accent-color));
 }
 
-/* Estilo padrão da linha abaixo dos links dos cards */
-.ciencia-dados .links a { border-bottom: 2px solid var(--color-ciencia); }
-.redes-neurais .links a { border-bottom: 2px solid var(--color-redes); }
-.desenvolvimento .links a { border-bottom: 2px solid var(--color-dev); }
-.algoritmos .links a { border-bottom: 2px solid var(--color-algoritmos); }
-
-/* --- Hover nos Botões/Links por Seção --- */
-.ciencia-dados .links a:hover {
-    background-color: var(--color-ciencia);
-    color: #000000;
-}
-
-.redes-neurais .links a:hover {
-    background-color: var(--color-redes);
-    color: #ffffff;
-}
-
-.desenvolvimento .links a:hover {
-    background-color: var(--color-dev);
-    color: #000000;
-}
-
-.algoritmos .links a:hover {
-    background-color: var(--color-algoritmos);
-    color: #ffffff;
-}
-
+.ciencia-dados .links a:hover { background-color: var(--color-ciencia); color: #000000; }
+.redes-neurais .links a:hover { background-color: var(--color-redes); color: #ffffff; }
+.desenvolvimento .links a:hover { background-color: var(--color-dev); color: #000000; }
+.algoritmos .links a:hover { background-color: var(--color-algoritmos); color: #ffffff; }
 
 /* =========================================
    5. CONTATO E FOOTER
    ========================================= */
 .contact-section {
     text-align: center;
-    padding-bottom: 6rem;
-    background: var(--bg-color); /* Fundo limpo (mesmo tom do site) */
-    padding-top: 4rem;
-    border: none; /* Removido fundo e borda superior */
+    padding: 4rem 0 6rem;
+    background: var(--bg-color);
 }
 
-/* Título da seção de contato com sublinhado completo */
 .contact-section h2 {
     position: relative;
     padding-bottom: 8px;
@@ -588,7 +543,7 @@ a {
 .contact-section h2::after {
     content: "";
     display: block;
-    width: 100%; /* Sublinhado completo */
+    width: 100%;
     height: 4px;
     background-color: var(--accent-color);
     position: absolute;
@@ -608,17 +563,6 @@ a {
     gap: 1.5rem;
 }
 
-.social-links .btn-outline {
-    border-color: var(--text-color);
-    color: var(--text-color);
-}
-
-.social-links .btn-outline:hover {
-    background: var(--accent-color);
-    border-color: var(--accent-color);
-    color: var(--btn-text-on-accent);
-}
-
 footer {
     text-align: center;
     padding: 2rem;
@@ -632,9 +576,7 @@ footer {
    6. RESPONSIVIDADE (MOBILE)
    ========================================= */
 @media (max-width: 900px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
+    .hero h1 { font-size: 2.5rem; }
 
     .hero-container {
         grid-template-columns: 1fr;
@@ -642,18 +584,53 @@ footer {
         gap: 3rem;
     }
 
-    .hero-text p {
-        margin: 0 auto 2rem auto;
-    }
-    .hero-buttons {
-        justify-content: center;
-    }
+    .hero-text p { margin: 0 auto 2rem; }
+    .hero-buttons { justify-content: center; }
 
     .img-placeholder {
         width: 250px;
         height: 250px;
         margin: 0 auto;
     }
+}
+
+@media (max-width: 768px) {
+    .navbar { padding: 1rem 5%; }
+    .hamburger-btn { display: flex; }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        right: 5%;
+        background: var(--nav-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5rem;
+        gap: 1.5rem;
+        box-shadow: 0 10px 30px var(--shadow);
+        width: 200px;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .hero { padding-top: 140px; }
 }
 
 @media (max-width: 700px) {
@@ -669,53 +646,5 @@ footer {
     .social-links a {
         width: 100%;
         text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        padding: 1rem 5%;
-    }
-
-    .hamburger-btn {
-        display: flex; /* Mostra o menu hambúrguer no celular */
-    }
-
-    .nav-links {
-        display: none; /* Esconde a lista original */
-        flex-direction: column;
-        position: absolute;
-        top: 75px; /* Posiciona logo abaixo do menu */
-        right: 5%;
-        background: var(--nav-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        padding: 1.5rem;
-        gap: 1.5rem;
-        box-shadow: 0 10px 30px var(--shadow);
-        width: 200px; /* Largura controlada, sem ocupar a tela toda */
-        z-index: 1000;
-    }
-
-    /* Classe que será ativada pelo JS */
-    .nav-links.active {
-        display: flex;
-        animation: slideDown 0.3s ease forwards;
-    }
-
-    /* Animação suave para o menu aparecer */
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .hero {
-        padding-top: 140px;
     }
 }
