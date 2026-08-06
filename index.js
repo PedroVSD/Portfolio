@@ -54,7 +54,7 @@ function getCurrentLanguage() {
 }
 
 async function loadLanguage(language) {
-  const response = await fetch(`/locales/${language}.json`);
+  const response = await fetch(`locales/${language}.json`);
 
   const translations = await response.json();
 
