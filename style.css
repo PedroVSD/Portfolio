@@ -15,8 +15,9 @@
     /* Cores das seções de projetos */
     --color-ciencia: #00e676;
     --color-redes: #9c27b0;
-    --color-dev: #ff9800;
-    --color-algoritmos: #ff4081;
+    --color-dev: #FF5F00;
+    --color-algoritmos: #FFF197;
+    --color-pesquisa:#FF0007;
 }
 
 [data-theme="dark"] {
@@ -423,12 +424,14 @@ a {
 #projetos h2:nth-of-type(3)::after { background-color: var(--color-redes); }
 #projetos h2:nth-of-type(4)::after { background-color: var(--color-dev); }
 #projetos h2:nth-of-type(5)::after { background-color: var(--color-algoritmos); }
+#projetos h2:nth-of-type(6)::after { background-color: var(--color-pesquisa);}
 
 /* Mapeamento de cor dinâmica por seção nos cards */
 .ciencia-dados { --card-accent: var(--color-ciencia); }
 .redes-neurais { --card-accent: var(--color-redes); }
 .desenvolvimento { --card-accent: var(--color-dev); }
 .algoritmos { --card-accent: var(--color-algoritmos); }
+.pesquisa { --card-accent: var(--color-pesquisa);}
 
 .projects-grid {
     display: grid;

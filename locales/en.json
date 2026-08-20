@@ -17,6 +17,7 @@
     "neural_networks": "Neural Networks",
     "software_engineering": "Software Engineering",
     "algorithms": "Algorithms",
+    "researchs": "Researchs",
     "rec_system": {
       "title": "Recommender System",
       "desc": "Unlike the other implementation, this one is more manual. The project consists of an implementation of two methods. One memory-based using KNN and the other is a model-based implementation using SVD by funk."
@@ -76,6 +77,10 @@
     "comp_prog": {
       "title": "Competitive Programming & Algorithms",
       "desc": "Refers to my study and projects focused on algorithms, which led me to prepare for programming marathons. Also includes solutions for several LeetCode problems."
+    },
+    "research": {
+      "title": "LLMs, economics and BigFive",
+      "desc": "For my capstone project, I conducted research integrating Computer science, economics, and psychology. The goal was to use LLMs to simulate decision-making and analyze their strategies, specifically examining how variations across the Big Five personality spectrum and macroeconomic contexts influence those decisions."
     }
   },
   "about_me": {
@@ -98,7 +103,8 @@
     "data_structures": "Data Structures",
     "dyn_prog": "Dynamic Programming",
     "prog_logic": "Programming Logic",
-    "data": "Data"
+    "data": "Data",
+    "research_tags": "Researchs"
   },
   "links": {
     "demo": "Live Demo"

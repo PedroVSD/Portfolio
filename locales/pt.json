@@ -17,6 +17,7 @@
     "neural_networks": "Redes Neurais",
     "software_engineering": "Engenharia de software",
     "algorithms": "Algoritmos",
+    "researchs": "Pesquisas",
     "rec_system": {
       "title": "Sistema de recomendação",
       "desc": "Diferente da outra implementação, essa implementação é mais manual. O projeto se trata de uma implementação de dois métodos. Um baseado em memória utilizando o KNN e o outro é a implementação do model based utilizando o SVD by funk."
@@ -76,6 +77,10 @@
     "comp_prog": {
       "title": "Programação competitiva e algoritmos",
       "desc": "Parte referente ao meu estudo/projetos de estudo em algoritmos. O que me levou ao estudo para participar de maratonas de programação. Também há resoluções de alguns problemas do leetcode."
+    },
+    "research": {
+      "title": "LLMs, economia e BigFive",
+      "desc": "Durante meu TCC desenvolvi uma pesquisa que engloba Computação, economia e psicologia. O intuito foi utilizar LLMs para simular tomadas de decisões e estudar a estratégia das LLMs. E como variações do espectro de personalidade dividido pelo BigFive e contextos macro econômicos influenciam a tomada de decisão."
     }
   },
   "about_me": {
@@ -98,7 +103,8 @@
     "data_structures": "Estrutura de dados",
     "dyn_prog": "Programação dinâmica",
     "prog_logic": "Lógica de programação",
-    "data": "Dados"
+    "data": "Dados",
+    "research_tags": "Pesquisas"
   },
   "links": {
     "demo": "Demo Online"
