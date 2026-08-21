@@ -602,7 +602,7 @@ a {
 }
 
 
-
+.links .codigo_link a:hover {background-color: var(--accent-color); color:var(--text-color);}
 .ciencia-dados .links a:hover { background-color: var(--color-ciencia); color:var(--text-color); }
 .redes-neurais .links a:hover { background-color: var(--color-redes); color:var(--text-color)s; }
 .desenvolvimento .links a:hover { background-color: var(--color-dev); color:var(--text-color); }
