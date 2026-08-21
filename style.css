@@ -509,24 +509,106 @@ a {
 
 .links {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 1.5rem;
     margin-top: auto;
 }
 
-.links a {
+.codigo_link {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Estilo dos links de código */
+.codigo_link a {
     color: var(--text-color);
     font-size: 0.9rem;
     font-weight: 700;
     padding: 2px 4px;
+
     border-radius: 4px;
-    transition: all 0.3s ease;
     border-bottom: 2px solid var(--card-accent, var(--accent-color));
+
+    transition: all 0.3s ease;
 }
 
-.ciencia-dados .links a:hover { background-color: var(--color-ciencia); color: #000000; }
-.redes-neurais .links a:hover { background-color: var(--color-redes); color: #ffffff; }
-.desenvolvimento .links a:hover { background-color: var(--color-dev); color: #000000; }
-.algoritmos .links a:hover { background-color: var(--color-algoritmos); color: #ffffff; }
+.btn_pagina {
+    margin-left: auto;
+    background: transparent;
+}
+
+.btn_pagina a {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    border-radius: 50%;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.btn_pagina a:hover {
+    background: transparent !important;
+    color:var(--text-color);
+    box-shadow: none !important;
+}
+
+/* Circunferência */
+.circle-border {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    fill: none;
+    stroke: var(--card-accent, var(--accent-color));
+    stroke-width: 2;
+
+    /* Comprimento da circunferência */
+    stroke-dasharray: 126;
+    stroke-dashoffset: 126;
+
+    transform: rotate(-90deg);
+    transform-origin: center;
+
+    transition: stroke-dashoffset 0.6s ease;
+}
+
+/* Seta */
+.arrow {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hover: desenha a circunferência */
+.btn_pagina a:hover .circle-border {
+    stroke-dashoffset: 0;
+}
+
+/* Cor da seta */
+.btn_pagina a:hover {
+    color: var(--card-accent, var(--accent-color));
+}
+
+
+
+.ciencia-dados .links a:hover { background-color: var(--color-ciencia); color:var(--text-color); }
+.redes-neurais .links a:hover { background-color: var(--color-redes); color:var(--text-color)s; }
+.desenvolvimento .links a:hover { background-color: var(--color-dev); color:var(--text-color); }
+.algoritmos .links a:hover { background-color: var(--color-algoritmos); color:var(--text-color); }
+.pesquisa .links a:hover { background-color: var(--color-pesquisa); color:var(--text-color); }
+
 
 /* =========================================
    5. CONTATO E FOOTER
