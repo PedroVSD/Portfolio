@@ -20,7 +20,7 @@
     "researchs": "Researchs",
     "rec_system": {
       "title": "Recommender System",
-      "desc": "Unlike the other implementation, this one is more manual. The project consists of an implementation of two methods. One memory-based using KNN and the other is a model-based implementation using SVD by funk."
+      "desc": "I implemented and evaluated two recommendation systems: a memory-based approach using KNN and a model-based approach using Funk's SVD. The pipeline involved dataset cleaning and organization, data normalization, model training, and performance evaluation. In the SVD-based approach, latent factors for users and items were learned to model their interactions. For both approaches, I performed hyperparameter tuning to optimize the models and compare their performance. The model achieved an RMSE of 0.8527 and a validation RMSE of 0.9313. The project includes a paper detailing the methodology, experiments, and results."
     },
     "movie_rec": {
       "title": "Movie Recommender System",
@@ -51,20 +51,20 @@
       "desc": "Analyzed a dataset containing information about high school students. Data ETL was performed, and using PCA and K-Prototypes, grouping was based on data correlation to highlight areas needing improvement, corrections, and key attention points."
     },
     "nn_linreg": {
-      "title": "Neural Network for Linear Regression",
-      "desc": "Building a simple MLP aimed at learning the representation of a linear regression."
+      "title": "Neural network for mathematical representations",
+      "desc": "These are the \"simplest\" ones. I developed two neural network implementations using PyTorch to understand how the network changes and learns when adjusting parameters such as layers, neurons, and epochs and how techniques to prevent overfitting, like dropout, alter the network. These two implementations were designed for linear regression and for modeling a sine wave."
     },
     "rnn": {
       "title": "Recurrent Neural Network",
-      "desc": "PyTorch implementation of a recurrent neural network for image classification."
+      "desc": "In this project, we developed an image classifier using the CIFAR-10 dataset. For validation, I employed a holdout technique, splitting the data into 80% for training, 10% for testing, and 10% for validation. To mitigate overfitting, I applied data augmentation, performing image mirroring, rotation, and normalization during training."
     },
     "encoders": {
       "title": "Recurrent Neural Network (Encoders)",
-      "desc": "Implementation of autoencoders for image anomaly detection. The objective was to tweak architecture variables to achieve better anomaly detection results."
+      "desc": "On VAEs i created an anomaly detector. So the neural network learn how to tell the difference, between an image she recognizes and one she doesn't. For this one i got the fashionmnist dataset. Again i used holdout for separate the dataset 80/10/10. The model compression is from 748 to 32 dimensions."
     },
     "lstm": {
       "title": "LSTM Neural Network",
-      "desc": "LSTM neural network architecture for time series forecasting. In this project, the LSTM was trained to learn Bitcoin price behavior."
+      "desc": "On LSTM i desing a price estimator for bitcoin price. I used the bitcoin historic price change, but i only took data from 2023 onwards. Why? Because my experiment was taking more than 6 hours to complete. And yes using the VGA on google colab. I normalizes the atributes using the z-score, because is (as far as I know) the best way to normalize without experiencing significant fluctuations in the data's means and standard deviations, and without the data being influenced by extreme variations."
     },
     "f1_vrum": {
       "title": "F1 vrum-vrum",

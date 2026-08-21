@@ -20,7 +20,7 @@
     "researchs": "Pesquisas",
     "rec_system": {
       "title": "Sistema de recomendação",
-      "desc": "Diferente da outra implementação, essa implementação é mais manual. O projeto se trata de uma implementação de dois métodos. Um baseado em memória utilizando o KNN e o outro é a implementação do model based utilizando o SVD by funk."
+      "desc": "Implementei e avaliei dois sistemas de recomendação: uma abordagem baseada em memória utilizando KNN e uma abordagem baseada em modelo utilizando SVD by Funk. O pipeline envolveu limpeza e organização do dataset, normalização dos dados, treinamento dos modelos e avaliação de desempenho. Na abordagem baseada em SVD, foram aprendidos fatores latentes de usuários e itens para modelar suas interações. Em ambas as abordagens, realizei hiperparametrização para otimizar os modelos e comparar seu desempenho. O modelo apresentou RMSE de 0,8527 e RMSE de validação de 0,9313. O projeto inclui um artigo com a metodologia, experimentos e resultados detalhados."
     },
     "movie_rec": {
       "title": "Sistema de recomendação de filmes",
@@ -51,20 +51,20 @@
       "desc": "Analisei um dataset que contia informações sobre alunos do ensino médio. Foi realizada ETL dos dados e utilizando o PCA e o Kprototypes,o agrupamento foi baseado na correlação dos dados. Onde os resultados mostravam onde deveria ser aplicadas melhorias, correções e pontos de atenção."
     },
     "nn_linreg": {
-      "title": "Rede neural para regressão(linear)",
-      "desc": "Construção de uma MLP simples que visa aprender a representação de uma regressão linear"
+      "title": "Rede neural para representações matemáticas",
+      "desc": "Estas são as mais \"simples\". Desenvolvi duas implementações de redes neurais utilizando PyTorch para entender como a rede se modifica e aprende ao ajustar seus parâmetros como camadas, neurônios e épocas e como técnicas para evitar o overfitting, como o dropout alteram a rede. Essas duas implementações foram projetadas para regressão linear e para uma onda senoidal."
     },
     "rnn": {
       "title": "Rede neural recorrente",
-      "desc": "Implementação em pytorch de uma rede neural recorrente para classificação de imagem."
+      "desc": "Neste projeto, desenvolvi um classificador de imagens utilizando o conjunto de dados CIFAR-10. Para a validação, utilizei a técnica de holdout, dividindo os dados em 80% para treinamento, 10% para teste e 10% para validação. Para reduzir o overfitting, apliquei a técnica de data augmentation, realizando operações de espelhamento, rotação e normalização das imagens durante o treinamento."
     },
     "encoders": {
       "title": "Rede neural recorrente(encoders)",
-      "desc": "Implementação de auto encoders para detecção de anomalias em imagens. O objetivo foi ir alterando variáveis da arquitetura para um melhor resultado na detecção de anomalias."
+      "desc": "Criei um detector de anomalias utilizando VAEs. Assim, a rede neural aprende a distinguir entre uma imagem que ela reconhece e uma que não reconhece. Para este projeto, utilizei o conjunto de dados Fashion-MNIST. Novamente, empreguei a técnica de holdout para dividir o conjunto de dados na proporção 80/10/10. A compressão do modelo reduz a dimensionalidade de 748 para 32 dimensões."
     },
     "lstm": {
       "title": "Rede neural LSTM",
-      "desc": "Rede neural de arquitetura LSTM para previsão de uma série temporal. No projeto a LSTM foi treinada para aprender o comportamento do preço do bitcoin."
+      "desc": "Desenvolvi um estimador de preço para o Bitcoin utilizando LSTM. Utilizei o histórico de variações de preço da moeda, mas considerei apenas dados a partir de 2023. Por quê? Porque meu experimento levava mais de 6 horas para ser concluído, isso utilizando a GPU do Google Colab. Normalizei os atributos usando o z-score, pois essa é (até onde sei) a melhor maneira de normalizar sem causar flutuações significativas nas médias e nos desvios-padrão dos dados, nem permitir que eles sejam influenciados por variações extremas."
     },
     "f1_vrum": {
       "title": "F1 vrum-vrum",
