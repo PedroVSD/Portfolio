@@ -6,7 +6,7 @@
   },
   "hero": {
     "greeting": "Hello, my name is Pedro Vitor",
-    "bio": "I am a Computer Science student with an interest in Data science/engineering. I also like the software engineering part itself, the programming, architecture, and building software part. I also study MLOPs and DEVOPs.",
+    "bio": "I am a Computer Science student specializing in Data Science. I also study software engineering, software architecture, and system design, with the goal of eventually moving into MLOps.",
     "en_notice": "Hello, and thanks for the visit. If you do not know portuguese, you can translate to english by clicking in the translate button on the menu.",
     "btn_projects": "View Projects",
     "btn_contact": "Get in touch"
@@ -24,11 +24,11 @@
     },
     "movie_rec": {
       "title": "Movie Recommender System",
-      "desc": "A simple movie recommender system. The user chooses the number of movies they want to evaluate and the system recommends a list of movies they might like."
+      "desc": "A simple movie recommendation system that, unlike the one described above, was built using the Scikit-learn library. The user selects the number of movies they wish to rate and assigns a score to each one. Based on this, the system recommends a list of movies the user is likely to enjoy. Two approaches were implemented: one using a \"bag of words\" (or \"soup of words\") technique and another that did not use this approach."
     },
     "mini_course": {
       "title": "Machine Learning Short Course",
-      "desc": "I taught a short introductory course on machine learning. The course covered topics such as data preprocessing, statistical fundamentals, and practical algorithm application."
+      "desc": "Planned and taught an introductory mini-course covering supervised learning concepts, including Linear Regression, Logistic Regression, Decision Trees, and Clustering. The course provided a practical and instructional overview of the entire machine learning pipeline—from preprocessing to model training and evaluation—using Python and Scikit-learn. The presentation was open to the general academic community."
     },
     "lin_reg": {
       "title": "Linear Regression",
@@ -36,19 +36,19 @@
     },
     "nn_class": {
       "title": "Classification with Neural Networks",
-      "desc": "A dense neural network system trained to solve a classification problem."
+      "desc": "A dense neural network system trained to solve a classification problem. The project uses a classic problem: classifying Titanic survivors. The pipeline involved data cleaning and preparation, data normalization, training combined with validation, and techniques to prevent overfitting, such as dropout."
     },
     "data_analysis": {
       "title": "Data Analysis",
-      "desc": "Performed data analysis on an IBGE dataset to discover patterns and details. Applied techniques ranging from machine learning to data mining."
+      "desc": "An exploratory data analysis (EDA) was conducted using data collected by the IBGE (Brazilian Institute of Geography and Statistics). The aim of the study was to perform data mining to uncover hidden insights, thereby enabling better attention to cases requiring it. Data preprocessing and clustering were carried out during the analysis to facilitate a more effective examination."
     },
     "assoc_rules": {
       "title": "Association Rules",
-      "desc": "In this project, I performed a dataset analysis using association rules, such as Support, Confidence, Lift, and Conviction, to identify what factors contributed most to user churn."
+      "desc": "This project was analyzed using a different approach, employing association rules, such as Support, Confidence, Lift, and Conviction, to explore and discover the events and characteristics that led customers to abandon a telephone company's service (i.e., to identify the factors driving churn). In addition to association rules, the FP-Growth algorithm was used to assist in the data analysis."
     },
     "clustering": {
       "title": "Clustering",
-      "desc": "Analyzed a dataset containing information about high school students. Data ETL was performed, and using PCA and K-Prototypes, grouping was based on data correlation to highlight areas needing improvement, corrections, and key attention points."
+      "desc": "An analysis and clustering process was performed on a dataset regarding student performance at a school to identify student profiles and examine correlations. The goal was to determine whether measures should be implemented to assist students with poor performance. Preliminary data ETL was conducted, and PCA was applied to improve the visualization of the resulting groups. The K-prototypes algorithm was selected for clustering due to its ability to handle a mix of categorical and non-categorical data."
     },
     "nn_linreg": {
       "title": "Neural network for mathematical representations",
@@ -68,11 +68,11 @@
     },
     "f1_vrum": {
       "title": "F1 vrum-vrum",
-      "desc": "A project built to study APIs more deeply by combining the world of F1 with programming. Future plans include data-related features like forecasting and statistical insights."
+      "desc": "An API built using FastAPI. The project aims to create an API featuring Formula 1 season data. It will allow users to query drivers, teams, circuits, races, seasons, and results. Planned future features include predictions, statistics, and a dashboard."
     },
     "ecommerce": {
       "title": "Gaming E-commerce",
-      "desc": "Developed a gaming e-commerce using the AdonisJS framework based on MVC architecture. The project includes product CRUD (search and pagination), user roles (user and admin levels), a shopping cart, AJAX notifications, Stripe payment integration, and database seeding via the RAWG API."
+      "desc": "I built a full-stack e-commerce platform using AdonisJS, which runs on Node.js. The platform is a game store following the MVC pattern that supports various platforms ranging from PC to PS5. The backend was built as a REST API featuring authentication, session management, and database management (using SQLite). Database operations were handled via an ORM (including migrations and seeders), and the RAWG API was used to populate the data. Project features include CRUD functionality for users and items (with an admin dashboard), a wishlist, and a commenting system. Additionally, the project implements debouncing and pagination for database queries, shopping cart persistence, and integration with the Stripe payment gateway."
     },
     "comp_prog": {
       "title": "Competitive Programming & Algorithms",
