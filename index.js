@@ -135,9 +135,11 @@ function getCurrentLanguage() {
 
 async function loadLanguage(language) {
   try {
-    const response = await fetch(
-      `./locales/${language}.json`
-    );
+    let response = await fetch(`./locales/${language}.json`);
+
+    if (!response.ok) {
+      response = await fetch(`../locales/${language}.json`);
+    }
 
     if (!response.ok) {
       throw new Error(
@@ -148,20 +150,26 @@ async function loadLanguage(language) {
     const translations =
       await response.json();
 
-    document
-      .querySelectorAll("[data-i18n]")
-      .forEach((element) => {
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
         const key = element.dataset.i18n;
-
-        const value = key
-          .split(".")
-          .reduce(
-            (obj, item) => obj?.[item],
-            translations
-          );
-
+        const value = key.split(".").reduce((obj, item) => obj?.[item], translations);
         if (value !== undefined) {
-          element.textContent = value;
+          // If element is a title, update document title as well
+          if (element.tagName === "TITLE") {
+            element.textContent = value;
+            document.title = value;
+          } else {
+            element.textContent = value;
+          }
+        }
+      });
+
+      // Suporte para tradução de atributos alt (imagens da galeria)
+      document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+        const key = element.dataset.i18nAlt;
+        const value = key.split(".").reduce((obj, item) => obj?.[item], translations);
+        if (value !== undefined) {
+          element.setAttribute("alt", value);
         }
       });
 
