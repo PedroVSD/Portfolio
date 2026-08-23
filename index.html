@@ -148,10 +148,68 @@
                 </div>
 
                 <div class="hero-image">
-                    <div class="img-placeholder">
-                        <div class="core"></div>
-                        <div class="orbit orbit-1"></div>
-                        <div class="orbit orbit-2"></div>
+                    <div class="f1-telemetry" aria-label="Circuito de F1 com telemetria de dados">
+                        <svg viewBox="0 0 320 210" class="f1-track-svg" role="img">
+                            <defs>
+                                <linearGradient id="trackGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="var(--accent-color)" stop-opacity="0.15" />
+                                    <stop offset="50%" stop-color="var(--accent-color)" stop-opacity="1" />
+                                    <stop offset="100%" stop-color="var(--accent-color)" stop-opacity="0.15" />
+                                </linearGradient>
+                            </defs>
+                            <!-- grade sutil de dados -->
+                            <g class="track-grid" opacity="0.07" stroke="var(--text-secondary)" stroke-width="0.6">
+                                <line x1="0" y1="35" x2="320" y2="35" />
+                                <line x1="0" y1="70" x2="320" y2="70" />
+                                <line x1="0" y1="105" x2="320" y2="105" />
+                                <line x1="0" y1="140" x2="320" y2="140" />
+                                <line x1="0" y1="175" x2="320" y2="175" />
+                                <line x1="64" y1="0" x2="64" y2="210" />
+                                <line x1="128" y1="0" x2="128" y2="210" />
+                                <line x1="192" y1="0" x2="192" y2="210" />
+                                <line x1="256" y1="0" x2="256" y2="210" />
+                            </g>
+                            <!-- pista base -->
+                            <path
+                                id="trackPath"
+                                d="M 38 108 C 38 42, 98 22, 158 72 C 198 102, 258 28, 282 82 C 302 132, 242 188, 162 168 C 82 148, 18 182, 38 108 Z"
+                                fill="none"
+                                stroke="var(--border-color)"
+                                stroke-width="14"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                opacity="0.35"
+                            />
+                            <!-- linha de telemetria -->
+                            <path
+                                class="track-line"
+                                d="M 38 108 C 38 42, 98 22, 158 72 C 198 102, 258 28, 282 82 C 302 132, 242 188, 162 168 C 82 148, 18 182, 38 108 Z"
+                                fill="none"
+                                stroke="url(#trackGrad)"
+                                stroke-width="3.2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-dasharray="9 7"
+                            />
+                            <!-- carro que percorre a pista -->
+                            <g>
+                                <g transform="translate(-12 -8) scale(0.042)">
+                                    <path
+                                        fill="var(--accent-color)"
+                                        d="M355.975 292.25a24.82 24.82 0 1 0 24.82-24.81a24.84 24.84 0 0 0-24.82 24.81m-253-24.81a24.81 24.81 0 1 1-24.82 24.81a24.84 24.84 0 0 1 24.81-24.81zm-76.67-71.52h67.25l-13.61 49.28l92-50.28h57.36l1.26 34.68l32 14.76l11.74-14.44h15.62l3.16 16c137.56-13 192.61 29.17 192.61 29.17s-7.52 5-25.93 8.39c-3.88 3.31-3.66 14.44-3.66 14.44h24.2v16h-52v-27.48c-1.84.07-4.45.41-7.06.47a40.81 40.81 0 1 0-77.25 23h-204.24a40.81 40.81 0 1 0-77.61-17.67c0 1.24.06 2.46.17 3.67h-36z"
+                                    />
+                                </g>
+                                <animateMotion dur="6.5s" repeatCount="indefinite" rotate="auto">
+                                    <mpath href="#trackPath" />
+                                </animateMotion>
+                            </g>
+                            <!-- ponto de posição -->
+                            <circle r="3.2" fill="var(--accent-color)" opacity="0.95">
+                                <animateMotion dur="6.5s" repeatCount="indefinite" rotate="auto">
+                                    <mpath href="#trackPath" />
+                                </animateMotion>
+                            </circle>
+                        </svg>
                     </div>
                 </div>
             </div>

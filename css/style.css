@@ -378,6 +378,35 @@ a {
     }
 }
 
+/* F1 Telemetry Hero — apenas a animação (sem legenda/emblemas) */
+.f1-telemetry {
+    width: 360px;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.f1-track-svg {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    display: block;
+    overflow: visible;
+    filter: drop-shadow(0 10px 28px var(--shadow));
+}
+
+.track-line {
+    animation: dashMove 1.1s linear infinite;
+}
+
+@keyframes dashMove {
+    to {
+        stroke-dashoffset: -32;
+    }
+}
+
 /* =========================================
    4. PROJETOS
    ========================================= */
@@ -677,6 +706,16 @@ footer {
         height: 250px;
         margin: 0 auto;
     }
+
+    .f1-telemetry {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+    }
+
+    .f1-track-svg {
+        max-width: 260px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -731,5 +770,11 @@ footer {
     .social-links a {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .track-line {
+        animation: none !important;
     }
 }
