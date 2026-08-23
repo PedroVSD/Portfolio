@@ -50,6 +50,10 @@
       "title": "Clustering",
       "desc": "An analysis and clustering process was performed on a dataset regarding student performance at a school to identify student profiles and examine correlations. The goal was to determine whether measures should be implemented to assist students with poor performance. Preliminary data ETL was conducted, and PCA was applied to improve the visualization of the resulting groups. The K-prototypes algorithm was selected for clustering due to its ability to handle a mix of categorical and non-categorical data."
     },
+    "embedding_cluster": {
+      "title": "Embedding Cluster",
+      "desc": "Experiment for semantic proximity with embeddings: sentences and adjectives are vectorized and grouped to reveal how language models organize meaning in latent space. Pipeline includes embedding generation, dimensionality reduction (PCA/UMAP), clustering and interactive visualization to validate prompt engineering hypotheses and textual similarity."
+    },
     "nn_linreg": {
       "title": "Neural network for mathematical representations",
       "desc": "These are the \"simplest\" ones. I developed two neural network implementations using PyTorch to understand how the network changes and learns when adjusting parameters such as layers, neurons, and epochs and how techniques to prevent overfitting, like dropout, alter the network. These two implementations were designed for linear regression and for modeling a sine wave."
@@ -286,6 +290,31 @@
       "tech_p": "Python, Pandas, K-Prototypes, KModes, Scikit-learn, Matplotlib.",
       "conclusion_title": "Insights",
       "conclusion_p": "Clusters revealed 'high attendance low grade' vs 'low attendance medium grade', guiding specific interventions.",
+      "btn_github": "View on GitHub",
+      "footer": "2025 Pedro Vitor. Thanks for visiting. :)"
+    },
+    "embedding_cluster": {
+      "badge": "Data Science • NLP • Embeddings",
+      "title": "Embedding Cluster",
+      "subtitle": "Semantic proximity of sentences and adjectives in latent space, for studies involving LLMs.",
+      "back": "Back to projects",
+      "about_title": "About the project",
+      "about_p1": "The project involves clustering based on semantic similarity. During my capstone project, I proposed an approach to a problem I was investigating for my experiments: combining prompting, psychology, and similarity. I wondered: why not use embeddings to measure the proximity between the phrases and the adjectives?",
+      "about_p2": "These phrases and adjectives relate to the personality model proposed by Goldberg in his study, with the phrases drawn from the dataset used by the IPIP. I then generated embeddings for all these texts and measured the similarity between the phrases and the adjectives.",
+      "gallery_title": "Gallery — Vector Space and Clusters",
+      "gallery_desc": "Replace with your charts: UMAP 2D of embeddings, cosine similarity heatmap and dendrogram/hierarchy of clusters.",
+      "gallery_img1_alt": "2D UMAP projection of embeddings",
+      "gallery_img1_caption": "Figure 1 — 2D UMAP: sentences and adjectives colored by cluster. Proximity = semantic similarity.",
+      "gallery_img2_alt": "Cosine similarity heatmap",
+      "gallery_img2_caption": "Figure 2 — Cosine similarity heatmap between sentence/adjective pairs.",
+      "gallery_img3_alt": "Silhouette and k selection",
+      "gallery_img3_caption": "Figure 3 — Elbow + silhouette for choosing k and cluster stability.",
+      "method_title": "Pipeline",
+      "method_p": "1) Curation of sentences/adjectives, 2) Vectorization with Sentence-Transformers, 3) L2 normalization + cosine similarity, 4) Clustering (K-Means/HDBSCAN), 5) UMAP/PCA projection to 2D, 6) Qualitative prompt validation with LLMs.",
+      "tech_title": "Technologies",
+      "tech_p": "Python, Sentence-Transformers, Hugging Face, Scikit-learn, UMAP, Pandas, Numpy, Matplotlib/Plotly.",
+      "conclusion_title": "Use cases",
+      "conclusion_p": "Foundation for data-driven prompt engineering: picking adjectives that actually shift the embedding, measuring semantic drift between paraphrases and building similarity test suites for LLMs before production.",
       "btn_github": "View on GitHub",
       "footer": "2025 Pedro Vitor. Thanks for visiting. :)"
     },

@@ -50,6 +50,10 @@
       "title": "Clustering",
       "desc": "Foi feita a análise e clusterização de um conjunto de dados sobre como era o rendimento de estudantes em uma escola, para descobrir como era o perfil dos alunos e como era a sua correlação. E se necessário, aplicar medidas poderiam ajudar aqueles com redimento não muito bom. Previarmente foi feita o ETL dos dados e também teve a necessidade da aplicação do PCA para ter uma melhor visualização dos grupos formados. Para o agrupamento foi utilizado o algortimo K-prototypes devido a sua capacidade de conseguir unir dados categóricos e não categóricos em cluster."
     },
+    "embedding_cluster": {
+      "title": "Cluster de Embeddings",
+      "desc": "Experimento para análise de proximidade semântica com embeddings: frases e adjetivos são vetorizados e agrupados para revelar como modelos de linguagem organizam significados no espaço latente. O pipeline inclui geração de embeddings, redução de dimensionalidade (PCA/UMAP), clusterização e visualização interativa para validar hipóteses de prompt engineering e similaridade textual."
+    },
     "nn_linreg": {
       "title": "Rede neural para representações matemáticas",
       "desc": "Estas são as mais \"simples\". Desenvolvi duas implementações de redes neurais utilizando PyTorch para entender como a rede se modifica e aprende ao ajustar seus parâmetros como camadas, neurônios e épocas e como técnicas para evitar o overfitting, como o dropout alteram a rede. Essas duas implementações foram projetadas para regressão linear e para uma onda senoidal."
@@ -286,6 +290,31 @@
       "tech_p": "Python, Pandas, K-Prototypes, KModes, Scikit-learn, Matplotlib.",
       "conclusion_title": "Insights",
       "conclusion_p": "Clusters revelaram 'alta frequência mas baixa nota' vs 'baixa frequência e nota mediana', orientando intervenções específicas.",
+      "btn_github": "Ver no GitHub",
+      "footer": "2025 Pedro Vitor. Obrigado pela visita. :)"
+    },
+    "embedding_cluster": {
+      "badge": "Ciência de Dados • NLP • Embeddings",
+      "title": "Cluster de Embeddings",
+      "subtitle": "Proximidade semântica de frases e adjetivos no espaço latente, para estudos com LLMs.",
+      "back": "Voltar para projetos",
+      "about_title": "Sobre o projeto",
+      "about_p1": "O projeto se trata de uma clusterização por similaridade semântica. Durante meu TCC, propus uma ideia para um problema a qual tinha para realizar os experimentos. Unir prompt, psicologia e similaridade. Logo, pensei, porquê não fazer os embeddings para menssurar a proximidade das frases e adjetivos?",
+      "about_p2": "Essas frases e adjetivos são relacionados ao modelo de divisão de personalidade proposto por Goldberg em seu estudo. Já as frases são frases são do conjunto de estudo realizado pelo IPIP. Então realizei os embeddgins de todos esses textos, e medi a similaridade das frases para com os adjetivos.",
+      "gallery_title": "Galeria — Espaço Vetorial e Clusters",
+      "gallery_desc": "Substitua pelos seus gráficos: UMAP 2D dos embeddings, heatmap de similaridade e dendrograma/hierarquia dos clusters.",
+      "gallery_img1_alt": "Projeção UMAP 2D dos embeddings",
+      "gallery_img1_caption": "Figura 1 — UMAP 2D: frases e adjetivos coloridos por cluster. Proximidade = similaridade semântica.",
+      "gallery_img2_alt": "Heatmap de similaridade cosseno",
+      "gallery_img2_caption": "Figura 2 — Heatmap de similaridade cosseno entre pares de frases/adjetivos.",
+      "gallery_img3_alt": "Silhouette e escolha de k",
+      "gallery_img3_caption": "Figura 3 — Elbow + silhouette para escolha de k e estabilidade dos clusters.",
+      "method_title": "Pipeline",
+      "method_p": "1) Curadoria de frases/adjetivos, 2) Vetorização com Sentence-Transformers, 3) Normalização L2 + similaridade cosseno, 4) Clusterização (K-Means/HDBSCAN), 5) Projeção UMAP/PCA para 2D, 6) Validação qualitativa de prompts com LLMs.",
+      "tech_title": "Tecnologias",
+      "tech_p": "Python, Sentence-Transformers, Hugging Face, Scikit-learn, UMAP, Pandas, Numpy, Matplotlib/Plotly.",
+      "conclusion_title": "Para que serve",
+      "conclusion_p": "Base para prompt engineering guiado por dados: escolher adjetivos que realmente mudam o embedding, medir drift semântico entre paráfrases e criar suítes de teste de similaridade para LLMs antes de ir para produção.",
       "btn_github": "Ver no GitHub",
       "footer": "2025 Pedro Vitor. Obrigado pela visita. :)"
     },
