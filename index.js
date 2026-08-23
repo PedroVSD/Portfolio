@@ -22,8 +22,6 @@ function updateThemeButton() {
   const isDark =
     htmlElement.getAttribute("data-theme") === "dark";
 
-  toggleBtn.textContent = isDark ? "☀" : "☾";
-
   toggleBtn.setAttribute(
     "aria-label",
     isDark
