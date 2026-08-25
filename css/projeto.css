@@ -7,6 +7,8 @@
     --card-hover-bg: #f0f2f5;
     --border-color: #d0d7de;
     --nav-bg: #ffffff;
+    --nav-glass-bg: rgba(255, 255, 255, 0.42);
+    --nav-glass-border: rgba(208, 215, 222, 0.30);
     --btn-text-on-accent: #ffffff;
     --shadow: rgba(0, 0, 0, 0.1);
     --font-main: "Inter", sans-serif;
@@ -22,6 +24,8 @@
     --card-hover-bg: #1c2128;
     --border-color: #30363d;
     --nav-bg: #0d1117;
+    --nav-glass-bg: rgba(13, 17, 23, 0.30);
+    --nav-glass-border: rgba(48, 54, 61, 0.35);
     --btn-text-on-accent: #0a0e14;
     --shadow: rgba(0, 0, 0, 0.6);
     --sombra-btn: 0 5px 15px rgba(255, 255, 255, 0.2);
@@ -82,10 +86,12 @@ img {
     width: 100%;
     top: 0;
     z-index: 1000;
-    background: var(--nav-bg);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
-    transition: background 0.3s ease;
+    background: var(--nav-glass-bg);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(16px) saturate(180%);
+    border-bottom: 1px solid var(--nav-glass-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .logo {
@@ -107,8 +113,10 @@ img {
 }
 
 .theme-btn {
-    background: transparent;
-    border: 1px solid var(--border-color);
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     color: var(--text-color);
     padding: 0.5rem;
     border-radius: 50%;
@@ -119,18 +127,23 @@ img {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
-    transition: 0.3s;
+    transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .theme-btn:hover {
-    background: var(--bg-color);
-    border-color: var(--accent-color);
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     color: var(--accent-color);
+    opacity: 0.9;
 }
 
 .btn-tradutor {
-    background: transparent;
-    border: none;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     color: var(--text-secondary);
     cursor: pointer;
 
