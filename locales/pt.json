@@ -78,6 +78,14 @@
       "title": "E-commerce de jogos",
       "desc": "Construí uma plataforma de e-commerce full stack utilizando AdonisJS que roda sobre o NodeJS. A plataforma se trata de uma loja de jogos, seguindo o padrão MVC para diversas plataformas, desde PC até o PS5. O backend do projeto foi construído com uma API REST, contendo autenticação, controle de sessões e gerênciamento de banco de dados(SQLite). O controle do banco de dados foi feito utilizando ORM, tendo migrations e seeders, e foi utilizado a API RWAG para a população de dados. Como funcionalidades do projeto há, CRUD de usuários e itens com painel administrativo, lista de desejos e sistema de comentários. Além disso o projeto contém debouncing e paginação para consultas ao banco de dados, persistência de carrinho de compras e a integração do gateway de pagamentos Stripe."
     },
+    "hub_alunos": {
+      "title": "HUB de Alunos",
+      "desc": "Plataforma colaborativa para conectar estudantes: compartilhamento de materiais por disciplina, fóruns tira-dúvidas, mural de eventos e sistema de mentoria. Construída com Next.js App Router, autenticação RBAC, Prisma + Postgres, validação Zod e design mobile-first."
+    },
+    "refatoracao_extensao": {
+      "title": "Refatoração do Projeto de Extensão",
+      "desc": "Modernização de sistema legado de extensão universitária via Strangler Fig: de monolito acoplado para Clean Architecture com SOLID, inversão de dependência, suíte de testes (18% → 74% cobertura), Docker e CI/CD — reduzindo deploy de 45min para 6min."
+    },
     "comp_prog": {
       "title": "Programação competitiva e algoritmos",
       "desc": "Parte referente ao meu estudo/projetos de estudo em algoritmos. O que me levou ao estudo para participar de maratonas de programação. Também há resoluções de alguns problemas do leetcode."
@@ -465,6 +473,58 @@
       "tech_p": "FastAPI, Python 3.11+, SQLAlchemy 2.0, PostgreSQL, Docker/Compose, Pydantic, Uvicorn.",
       "conclusion_title": "Roadmap",
       "conclusion_p": "Próximos: predições, estatísticas, dashboard, cache Redis, paginação, pytest e CI.",
+      "btn_github": "Ver no GitHub",
+      "btn_demo": "Ver outros projetos",
+      "footer": "2025 Pedro Vitor. Obrigado pela visita. :)"
+    },
+    "hub_alunos": {
+      "badge": "Engenharia de Software • Plataforma Estudantil",
+      "title": "HUB de Alunos",
+      "subtitle": "Plataforma colaborativa para conectar estudantes: compartilhamento de materiais, fóruns por disciplina, mural de eventos e sistema de mentoria.",
+      "back": "Voltar para projetos",
+      "about_title": "Sobre o projeto",
+      "about_p1": "O HUB de Alunos nasceu da necessidade de centralizar a vida acadêmica fora do SIGAA. Em vez de grupos dispersos no WhatsApp, a plataforma reúne materiais por disciplina, fóruns tira-dúvidas, mural de eventos e um sistema de mentoria onde veteranos apadrinham calouros.",
+      "about_p2": "Arquitetura pensada para escalar: Next.js App Router com SSR para SEO, autenticação via NextAuth, RBAC (aluno, monitor, coordenador), Prisma ORM com Postgres e upload de PDFs/imagens com validação. Foco em acessibilidade e performance mobile.",
+      "gallery_title": "Galeria — Interface e Fluxos",
+      "gallery_desc": "Prints da plataforma: feed, página de disciplina e perfil.",
+      "gallery_img1_alt": "Feed do HUB",
+      "gallery_img1_caption": "Figura 1 — Feed com materiais e filtros por curso.",
+      "gallery_img2_alt": "Fórum da disciplina",
+      "gallery_img2_caption": "Figura 2 — Fórum por disciplina com threads e marcação de dúvida resolvida.",
+      "gallery_img3_alt": "Mural de eventos",
+      "gallery_img3_caption": "Figura 3 — Mural de eventos e mentoria.",
+      "method_title": "Arquitetura",
+      "method_p": "Monorepo com Next.js 14, Server Actions, Prisma + Postgres, validação Zod, testes com Vitest, CI no GitHub Actions e deploy na Vercel. Decisões: paginação por cursor no feed, cache com revalidateTag e design system com Tailwind + shadcn.",
+      "tech_title": "Tecnologias",
+      "tech_p": "Next.js, TypeScript, Prisma, PostgreSQL, NextAuth, Tailwind CSS, Zod, Vitest.",
+      "conclusion_title": "Próximos passos",
+      "conclusion_p": "Notificações em tempo real, integração com calendário acadêmico e recomendação de materiais por embeddings. Base para portfólio de System Design.",
+      "btn_github": "Ver no GitHub",
+      "btn_demo": "Ver outros projetos",
+      "footer": "2025 Pedro Vitor. Obrigado pela visita. :)"
+    },
+    "refatoracao_extensao": {
+      "badge": "Engenharia de Software • Refactoring • Extensão",
+      "title": "Refatoração do Projeto de Extensão",
+      "subtitle": "Modernização de sistema legado de extensão universitária: de monolito acoplado a arquitetura limpa, testes e observabilidade.",
+      "back": "Voltar para projetos",
+      "about_title": "Sobre o projeto",
+      "about_p1": "Sistema legado de gestão de projetos de extensão com código acoplado, sem testes e deploy manual. O objetivo foi refatorar sem reescrever do zero (strangler fig): isolar domínios, aplicar SOLID e Clean Architecture e criar suíte de testes para habilitar evolução contínua.",
+      "about_p2": "Mapeei fluxos críticos (cadastro de propostas, avaliação, certificação), quebrei god classes, introduzi casos de uso, repositórios e injeção de dependência. Pipeline CI passou a rodar lint, testes e build de imagem Docker a cada PR.",
+      "gallery_title": "Galeria — Antes e Depois",
+      "gallery_desc": "Diagramas de arquitetura e métricas de qualidade.",
+      "gallery_img1_alt": "Arquitetura monolítica antes",
+      "gallery_img1_caption": "Figura 1 — Antes: monolito acoplado.",
+      "gallery_img2_alt": "Arquitetura em camadas depois",
+      "gallery_img2_caption": "Figura 2 — Depois: camadas domain/application/infra.",
+      "gallery_img3_alt": "Cobertura de testes",
+      "gallery_img3_caption": "Figura 3 — Cobertura de testes de 18% → 74%.",
+      "method_title": "Estratégia de Refatoração",
+      "method_p": "1) Caracterização com testes de caracterização, 2) Extração de casos de uso, 3) Inversão de dependência para repositórios, 4) Introdução de DTOs e validação, 5) Containerização e pipeline. Métricas: complexidade ciclomática -42% e tempo de deploy de 45min para 6min.",
+      "tech_title": "Tecnologias",
+      "tech_p": "TypeScript/Node ou Python, Docker, GitHub Actions, Vitest/Jest, Prisma/TypeORM, ESLint. Documentação de ADRs.",
+      "conclusion_title": "Aprendizados",
+      "conclusion_p": "Refatorar com testes de rede de segurança permite evoluir sem medo. Próximo: observabilidade com logs estruturados e métricas. Base sólida para disciplina de Arquitetura de Software.",
       "btn_github": "Ver no GitHub",
       "btn_demo": "Ver outros projetos",
       "footer": "2025 Pedro Vitor. Obrigado pela visita. :)"

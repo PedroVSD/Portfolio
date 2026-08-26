@@ -78,6 +78,14 @@
       "title": "Gaming E-commerce",
       "desc": "I built a full-stack e-commerce platform using AdonisJS, which runs on Node.js. The platform is a game store following the MVC pattern that supports various platforms ranging from PC to PS5. The backend was built as a REST API featuring authentication, session management, and database management (using SQLite). Database operations were handled via an ORM (including migrations and seeders), and the RAWG API was used to populate the data. Project features include CRUD functionality for users and items (with an admin dashboard), a wishlist, and a commenting system. Additionally, the project implements debouncing and pagination for database queries, shopping cart persistence, and integration with the Stripe payment gateway."
     },
+    "hub_alunos": {
+      "title": "Student HUB",
+      "desc": "Collaborative platform to connect students: material sharing by subject, Q&A forums, event board and mentorship system. Built with Next.js App Router, RBAC auth, Prisma + Postgres, Zod validation and mobile-first design."
+    },
+    "refatoracao_extensao": {
+      "title": "Extension Project Refactoring",
+      "desc": "Legacy university extension system modernization via Strangler Fig: from coupled monolith to Clean Architecture with SOLID, dependency inversion, test suite (18% → 74% coverage), Docker and CI/CD — cutting deploy from 45min to 6min."
+    },
     "comp_prog": {
       "title": "Competitive Programming & Algorithms",
       "desc": "Refers to my study and projects focused on algorithms, which led me to prepare for programming marathons. Also includes solutions for several LeetCode problems."
@@ -465,6 +473,58 @@
       "tech_p": "FastAPI, Python 3.11+, SQLAlchemy 2.0, PostgreSQL, Docker/Compose, Pydantic, Uvicorn.",
       "conclusion_title": "Roadmap",
       "conclusion_p": "Next: predictions, stats, dashboard, Redis cache, pagination, pytest and CI.",
+      "btn_github": "View on GitHub",
+      "btn_demo": "View other projects",
+      "footer": "2025 Pedro Vitor. Thanks for visiting. :)"
+    },
+    "hub_alunos": {
+      "badge": "Software Engineering • Student Platform",
+      "title": "Student HUB",
+      "subtitle": "Collaborative platform to connect students: material sharing, Q&A forums, event board and mentorship system.",
+      "back": "Back to projects",
+      "about_title": "About the project",
+      "about_p1": "The Student HUB was born to centralize academic life outside the official system. Instead of scattered WhatsApp groups, the platform gathers materials by subject, Q&A forums, event board and a mentorship system where seniors guide freshmen.",
+      "about_p2": "Architecture designed to scale: Next.js App Router with SSR for SEO, NextAuth auth, RBAC (student, tutor, coordinator), Prisma ORM with Postgres and PDF/image upload with validation. Focus on accessibility and mobile performance.",
+      "gallery_title": "Gallery — Interface and Flows",
+      "gallery_desc": "Screenshots: feed, subject page and profile.",
+      "gallery_img1_alt": "HUB feed",
+      "gallery_img1_caption": "Figure 1 — Feed with materials and course filters.",
+      "gallery_img2_alt": "Subject forum",
+      "gallery_img2_caption": "Figure 2 — Forum per subject with threads and solved marking.",
+      "gallery_img3_alt": "Event board",
+      "gallery_img3_caption": "Figure 3 — Event board and mentorship.",
+      "method_title": "Architecture",
+      "method_p": "Monorepo with Next.js 14, Server Actions, Prisma + Postgres, Zod validation, Vitest tests, GitHub Actions CI and Vercel deploy. Cursor pagination on feed, cache with revalidateTag and Tailwind + shadcn design system.",
+      "tech_title": "Technologies",
+      "tech_p": "Next.js, TypeScript, Prisma, PostgreSQL, NextAuth, Tailwind CSS, Zod, Vitest.",
+      "conclusion_title": "Next steps",
+      "conclusion_p": "Realtime notifications, academic calendar integration and material recommendation via embeddings. Basis for System Design portfolio.",
+      "btn_github": "View on GitHub",
+      "btn_demo": "View other projects",
+      "footer": "2025 Pedro Vitor. Thanks for visiting. :)"
+    },
+    "refatoracao_extensao": {
+      "badge": "Software Engineering • Refactoring • Extension",
+      "title": "Extension Project Refactoring",
+      "subtitle": "Legacy university extension system modernization: from coupled monolith to clean architecture, tests and observability.",
+      "back": "Back to projects",
+      "about_title": "About the project",
+      "about_p1": "Legacy extension management system with coupled code, no tests and manual deploy. Goal was to refactor without full rewrite (strangler fig): isolate domains, apply SOLID and Clean Architecture and create test suite to enable continuous evolution.",
+      "about_p2": "Mapped critical flows (proposal submission, evaluation, certification), broke god classes, introduced use cases, repositories and dependency injection. CI now runs lint, tests and Docker image build on each PR.",
+      "gallery_title": "Gallery — Before and After",
+      "gallery_desc": "Architecture diagrams and quality metrics.",
+      "gallery_img1_alt": "Monolithic architecture before",
+      "gallery_img1_caption": "Figure 1 — Before: coupled monolith.",
+      "gallery_img2_alt": "Layered architecture after",
+      "gallery_img2_caption": "Figure 2 — After: domain/application/infra layers.",
+      "gallery_img3_alt": "Test coverage",
+      "gallery_img3_caption": "Figure 3 — Coverage 18% → 74%.",
+      "method_title": "Refactoring Strategy",
+      "method_p": "1) Characterization tests, 2) Use case extraction, 3) Dependency inversion for repositories, 4) DTOs and validation, 5) Containerization and pipeline. Metrics: cyclomatic complexity -42% and deploy 45min → 6min.",
+      "tech_title": "Technologies",
+      "tech_p": "TypeScript/Node or Python, Docker, GitHub Actions, Vitest/Jest, Prisma/TypeORM, ESLint. ADR docs.",
+      "conclusion_title": "Learnings",
+      "conclusion_p": "Refactoring with safety net tests allows fearless evolution. Next: observability with structured logs and metrics. Solid base for Software Architecture course.",
       "btn_github": "View on GitHub",
       "btn_demo": "View other projects",
       "footer": "2025 Pedro Vitor. Thanks for visiting. :)"

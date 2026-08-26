@@ -1,45 +1,60 @@
 :root {
-    --bg-color: #ffffff;
-    --text-color: #1a1a1a;
-    --text-secondary: #57606a;
-    --accent-color: #0077ff;
-    --card-bg: #f6f8fa;
-    --card-hover-bg: #f0f2f5;
-    --border-color: #d0d7de;
-    --nav-bg: #ffffff;
-    --nav-glass-bg: rgba(255, 255, 255, 0.42);
-    --nav-glass-border: rgba(208, 215, 222, 0.30);
-    --nav-glass-bg-mobile: rgba(255, 255, 255, 0.90);
-    --nav-glass-border-mobile: rgba(208, 215, 222, 0.75);
-    --btn-text-on-accent: #ffffff;
-    --shadow: rgba(0, 0, 0, 0.1);
+    --bg-color: #FDFCF6;
+    --text-color: #1A1E1F;
+    --text-secondary: #5B6675;
+    --accent-color: #1F6FA3;
+    --card-bg: #FDFCF6;
+    --card-hover-bg: #FDFCF6;
+    --card-text: #1A1E1F;
+    --card-text-secondary: #5B6675;
+    --card-border: rgba(26, 30, 31, 0.13);
+    --border-color: rgba(26, 30, 31, 0.13);
+    --nav-bg: #FDFCF6;
+    --nav-glass-bg: rgba(253, 252, 246, 0.84);
+    --nav-glass-border: rgba(26, 30, 31, 0.08);
+    --nav-glass-bg-mobile: rgba(253, 252, 246, 0.96);
+    --nav-glass-border-mobile: rgba(26, 30, 31, 0.12);
+    --btn-text-on-accent: #FDFCF6;
+    --shadow: rgba(26, 30, 31, 0.06);
     --font-main: "Inter", sans-serif;
-    --sombra-btn: 0 5px 15px rgba(0, 119, 255, 0.4);
+    --sombra-btn: 0 2px 10px rgba(31, 111, 163, 0.22);
+    --dot-color: rgba(26, 30, 31, 0.08);
 
-    /* Cores das seções de projetos */
-    --color-ciencia: #00e676;
-    --color-redes: #9c27b0;
-    --color-dev: #FF5F00;
-    --color-algoritmos: #FFF197;
-    --color-pesquisa:#FF0007;
+    /* Paleta viva (sem neon) - principal azul no claro */
+    --color-ciencia: #D64045;   /* coral vermelho - ciência de dados */
+    --color-redes: #1F6FA3;     /* azul cerúleo - redes neurais / accent */
+    --color-dev: #C98A15;       /* âmbar viva - engenharia */
+    --color-algoritmos: #6B5DD3;/* roxo slate - algoritmos */
+    --color-pesquisa: #0E9A8A;  /* teal jade - pesquisa */
 }
 
 [data-theme="dark"] {
-    --bg-color: #0a0e14;
-    --text-color: #e6edf3;
-    --text-secondary: #9da5b4;
-    --accent-color: #00f2ff;
-    --card-bg: #161b22;
-    --card-hover-bg: #1c2128;
-    --border-color: #30363d;
-    --nav-bg: #0d1117;
-    --nav-glass-bg: rgba(13, 17, 23, 0.30);
-    --nav-glass-border: rgba(48, 54, 61, 0.35);
-    --nav-glass-bg-mobile: rgba(22, 27, 34, 0.92);
-    --nav-glass-border-mobile: rgba(48, 54, 61, 0.70);
-    --btn-text-on-accent: #0a0e14;
-    --shadow: rgba(0, 0, 0, 0.6);
-    --sombra-btn: 0 5px 15px rgba(255, 255, 255, 0.2);
+    --bg-color: #0F1419;
+    --text-color: #F2EEE9;
+    --text-secondary: #A8B2C1;
+    --accent-color: #5DD9C7;
+    --card-bg: #0F1419;
+    --card-hover-bg: #0F1419;
+    --card-text: #F2EEE9;
+    --card-text-secondary: #A8B2C1;
+    --card-border: rgba(242, 238, 233, 0.14);
+    --border-color: rgba(242, 238, 233, 0.14);
+    --nav-bg: #0F1419;
+    --nav-glass-bg: rgba(15, 20, 25, 0.78);
+    --nav-glass-border: rgba(242, 238, 233, 0.08);
+    --nav-glass-bg-mobile: rgba(22, 28, 33, 0.96);
+    --nav-glass-border-mobile: rgba(242, 238, 233, 0.12);
+    --btn-text-on-accent: #0F1419;
+    --shadow: rgba(0, 0, 0, 0.55);
+    --sombra-btn: 0 2px 12px rgba(93, 217, 199, 0.18);
+    --dot-color: rgba(242, 238, 233, 0.06);
+
+    /* Versões mais claras para contraste no fundo escuro */
+    --color-ciencia: #FF6B5E;
+    --color-redes: #6BCBFF;
+    --color-dev: #FFD060;
+    --color-algoritmos: #A78CFF;
+    --color-pesquisa: #5DD9C7;
 }
 
 * {
@@ -54,6 +69,9 @@ html {
 
 body {
     background-color: var(--bg-color);
+    background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+    background-size: 22px 22px;
+    background-position: 0 0;
     color: var(--text-color);
     font-family: var(--font-main);
     line-height: 1.6;
@@ -79,8 +97,9 @@ h2::after {
     content: "";
     display: block;
     width: 60px;
-    height: 4px;
-    background: var(--accent-color);
+    height: 0;
+    border-top: 2px dotted var(--accent-color);
+    background: transparent;
     margin: 10px auto 0;
 }
 
@@ -306,7 +325,7 @@ a {
     background: var(--accent-color);
     color: var(--btn-text-on-accent);
     padding: 0.8rem 2rem;
-    border-radius: 4px;
+    border-radius: 0;
     font-weight: 700;
     transition: transform 0.2s, box-shadow 0.2s;
     border: 2px solid var(--accent-color);
@@ -321,7 +340,7 @@ a {
     display: inline-block;
     border: 2px solid var(--text-color);
     padding: 0.8rem 2rem;
-    border-radius: 4px;
+    border-radius: 0;
     color: var(--text-color);
     font-weight: 700;
 }
@@ -450,15 +469,16 @@ a {
     text-align: center;
     margin-bottom: 3rem;
     position: relative;
-    padding-bottom: 8px;
+    padding-bottom: 12px;
 }
 
 #projetos > h2:first-of-type::after {
     content: "";
     display: block;
     width: 100%;
-    height: 4px;
-    background-color: var(--accent-color);
+    height: 0;
+    border-top: 2px dotted var(--accent-color);
+    background: transparent;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -470,24 +490,26 @@ a {
     text-align: left;
     margin-bottom: 2rem;
     position: relative;
-    padding-bottom: 8px;
+    padding-bottom: 12px;
 }
 
 #projetos h2:not(:first-of-type)::after {
     content: "";
     display: block;
     width: 100%;
-    height: 3px;
+    height: 0;
+    border-top: 2px dotted var(--accent-color);
+    background: transparent;
     position: absolute;
     bottom: 0;
     left: 0;
 }
 
-#projetos h2:nth-of-type(2)::after { background-color: var(--color-ciencia); }
-#projetos h2:nth-of-type(3)::after { background-color: var(--color-redes); }
-#projetos h2:nth-of-type(4)::after { background-color: var(--color-dev); }
-#projetos h2:nth-of-type(5)::after { background-color: var(--color-algoritmos); }
-#projetos h2:nth-of-type(6)::after { background-color: var(--color-pesquisa);}
+#projetos h2:nth-of-type(2)::after { border-color: var(--color-ciencia); }
+#projetos h2:nth-of-type(3)::after { border-color: var(--color-redes); }
+#projetos h2:nth-of-type(4)::after { border-color: var(--color-dev); }
+#projetos h2:nth-of-type(5)::after { border-color: var(--color-algoritmos); }
+#projetos h2:nth-of-type(6)::after { border-color: var(--color-pesquisa);}
 
 /* Mapeamento de cor dinâmica por seção nos cards */
 .ciencia-dados { --card-accent: var(--color-ciencia); }
@@ -503,52 +525,41 @@ a {
     margin-bottom: 3.5rem;
 }
 
-/* Card Base */
+/* Card Base - quadrado, cores invertidas (card = inverso do fundo) */
 .project-card {
     background: var(--card-bg);
     padding: 2.5rem;
-    border-radius: 8px;
+    border-radius: 0;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 4px solid var(--card-accent, var(--accent-color));
+    border: 1px solid var(--card-border);
+    transition: border-color 0.25s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    background: var(--card-hover-bg);
-    box-shadow: 0 10px 25px var(--shadow);
+    transform: none;
+    background: var(--card-bg);
+    border-color: var(--card-accent, var(--accent-color));
+    box-shadow: none;
 }
 
-/* Animações de Borda no Hover */
-.project-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 8px;
-    border: 1px solid var(--card-accent, var(--accent-color));
-    border-left: none;
-    clip-path: inset(0 100% 0 0);
-    pointer-events: none;
-    transition: clip-path 0.4s ease-in-out;
+/* Remove animação antiga de borda */
+.project-card::before,
+.project-card::after {
+    display: none;
 }
 
-.project-card:hover::before {
-    clip-path: inset(0 0 0 0);
-}
-.project-card:hover::after { height: 100%; }
-
-/* Conteúdo do Card */
+/* Conteúdo do Card - texto invertido */
 .project-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--text-color);
+    color: var(--card-text);
 }
 
 .project-card p {
-    color: var(--text-secondary);
+    color: var(--card-text-secondary);
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
 }
@@ -561,11 +572,11 @@ a {
 }
 
 .tech-stack span {
-    background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
+    background: transparent;
+    border: 1px solid var(--card-border);
+    color: var(--card-text);
     padding: 0.3rem 0.8rem;
-    border-radius: 4px;
+    border-radius: 0;
     font-size: 0.8rem;
     font-weight: 600;
 }
@@ -584,15 +595,15 @@ a {
     gap: 1.5rem;
 }
 
-/* Estilo dos links de código */
+/* Estilo dos links de código - dentro do card invertido */
 .codigo_link a {
-    color: var(--text-color);
+    color: var(--card-text);
     font-size: 0.9rem;
     font-weight: 700;
     padding: 2px 4px;
 
-    border-radius: 4px;
-    border-bottom: 2px solid var(--card-accent, var(--accent-color));
+    border-radius: 0;
+    border-bottom: 1px solid var(--card-accent, var(--accent-color));
 
     transition: all 0.3s ease;
 }
@@ -613,39 +624,45 @@ a {
     margin: 0;
     background: transparent !important;
     border: none !important;
-    border-bottom: none !important;
     box-shadow: none !important;
-    border-radius: 50%;
-    color: var(--text-color);
-    transition: color 0.3s ease;
+    border-radius: 0;
+    color: var(--card-text);
+    transition: color 0.25s ease;
 }
 
 .btn_pagina a:hover {
     background: transparent !important;
-    color:var(--text-color);
+    color: var(--card-accent, var(--accent-color));
     box-shadow: none !important;
 }
 
-/* Circunferência */
+/* Quadrado que se forma no hover - animação de traçado */
 .circle-border {
     position: absolute;
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     fill: none;
     stroke: var(--card-accent, var(--accent-color));
-    stroke-width: 2;
+    stroke-width: 1.4;
+    pointer-events: none;
+    overflow: visible;
+}
 
-    /* Comprimento da circunferência */
+.circle-border rect,
+.circle-border circle {
+    fill: none;
+    stroke: inherit;
+    stroke-width: inherit;
+    /* perímetro do quadrado 42*4=168 | círculo 2πr≈126 */
+    stroke-dasharray: 168;
+    stroke-dashoffset: 168;
+    transition: stroke-dashoffset 0.6s ease;
+}
+
+.circle-border circle {
     stroke-dasharray: 126;
     stroke-dashoffset: 126;
-
-    transform: rotate(-90deg);
-    transform-origin: center;
-
-    transition: stroke-dashoffset 0.6s ease;
 }
 
 /* Seta */
@@ -654,23 +671,18 @@ a {
     z-index: 2;
 }
 
-/* Hover: desenha a circunferência */
-.btn_pagina a:hover .circle-border {
+.btn_pagina a:hover .circle-border rect,
+.btn_pagina a:hover .circle-border circle {
     stroke-dashoffset: 0;
 }
 
-/* Cor da seta */
-.btn_pagina a:hover {
-    color: var(--card-accent, var(--accent-color));
-}
 
-
-.links .codigo_link a:hover {background-color: var(--accent-color); color:var(--text-color);}
-.ciencia-dados .links a:hover { background-color: var(--color-ciencia); color:var(--text-color); }
-.redes-neurais .links a:hover { background-color: var(--color-redes); color:var(--text-color)s; }
-.desenvolvimento .links a:hover { background-color: var(--color-dev); color:var(--text-color); }
-.algoritmos .links a:hover { background-color: var(--color-algoritmos); color:var(--text-color); }
-.pesquisa .links a:hover { background-color: var(--color-pesquisa); color:var(--text-color); }
+.links .codigo_link a:hover { background-color: transparent; color: var(--accent-color); border-bottom-color: var(--accent-color); }
+.ciencia-dados .links a:hover { background-color: transparent; color: var(--color-ciencia); border-bottom-color: var(--color-ciencia); }
+.redes-neurais .links a:hover { background-color: transparent; color: var(--color-redes); border-bottom-color: var(--color-redes); }
+.desenvolvimento .links a:hover { background-color: transparent; color: var(--color-dev); border-bottom-color: var(--color-dev); }
+.algoritmos .links a:hover { background-color: transparent; color: var(--color-algoritmos); border-bottom-color: var(--color-algoritmos); }
+.pesquisa .links a:hover { background-color: transparent; color: var(--color-pesquisa); border-bottom-color: var(--color-pesquisa); }
 
 
 /* =========================================
@@ -684,7 +696,7 @@ a {
 
 .contact-section h2 {
     position: relative;
-    padding-bottom: 8px;
+    padding-bottom: 12px;
     margin-bottom: 1.5rem;
 }
 
@@ -692,8 +704,9 @@ a {
     content: "";
     display: block;
     width: 100%;
-    height: 4px;
-    background-color: var(--accent-color);
+    height: 0;
+    border-top: 2px dotted var(--accent-color);
+    background: transparent;
     position: absolute;
     bottom: 0;
     left: 0;

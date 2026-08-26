@@ -1,34 +1,54 @@
 :root {
-    --bg-color: #ffffff;
-    --text-color: #1a1a1a;
-    --text-secondary: #57606a;
-    --accent-color: #0077ff;
-    --card-bg: #f6f8fa;
-    --card-hover-bg: #f0f2f5;
-    --border-color: #d0d7de;
-    --nav-bg: #ffffff;
-    --nav-glass-bg: rgba(255, 255, 255, 0.42);
-    --nav-glass-border: rgba(208, 215, 222, 0.30);
-    --btn-text-on-accent: #ffffff;
-    --shadow: rgba(0, 0, 0, 0.1);
+    --bg-color: #FDFCF6;
+    --text-color: #1A1E1F;
+    --text-secondary: #5B6675;
+    --accent-color: #1F6FA3;
+    --card-bg: #FDFCF6;
+    --card-hover-bg: #FDFCF6;
+    --card-text: #1A1E1F;
+    --card-text-secondary: #5B6675;
+    --card-border: rgba(26, 30, 31, 0.13);
+    --border-color: rgba(26, 30, 31, 0.13);
+    --nav-bg: #FDFCF6;
+    --nav-glass-bg: rgba(253, 252, 246, 0.84);
+    --nav-glass-border: rgba(26, 30, 31, 0.08);
+    --btn-text-on-accent: #FDFCF6;
+    --shadow: rgba(26, 30, 31, 0.06);
     --font-main: "Inter", sans-serif;
-    --sombra-btn: 0 5px 15px rgba(0, 119, 255, 0.4);
+    --sombra-btn: 0 2px 10px rgba(31, 111, 163, 0.22);
+    --dot-color: rgba(26, 30, 31, 0.08);
+
+    --color-ciencia: #D64045;
+    --color-redes: #1F6FA3;
+    --color-dev: #C98A15;
+    --color-algoritmos: #6B5DD3;
+    --color-pesquisa: #0E9A8A;
 }
 
 [data-theme="dark"] {
-    --bg-color: #0a0e14;
-    --text-color: #e6edf3;
-    --text-secondary: #9da5b4;
-    --accent-color: #00f2ff;
-    --card-bg: #161b22;
-    --card-hover-bg: #1c2128;
-    --border-color: #30363d;
-    --nav-bg: #0d1117;
-    --nav-glass-bg: rgba(13, 17, 23, 0.30);
-    --nav-glass-border: rgba(48, 54, 61, 0.35);
-    --btn-text-on-accent: #0a0e14;
-    --shadow: rgba(0, 0, 0, 0.6);
-    --sombra-btn: 0 5px 15px rgba(255, 255, 255, 0.2);
+    --bg-color: #0F1419;
+    --text-color: #F2EEE9;
+    --text-secondary: #A8B2C1;
+    --accent-color: #5DD9C7;
+    --card-bg: #0F1419;
+    --card-hover-bg: #0F1419;
+    --card-text: #F2EEE9;
+    --card-text-secondary: #A8B2C1;
+    --card-border: rgba(242, 238, 233, 0.14);
+    --border-color: rgba(242, 238, 233, 0.14);
+    --nav-bg: #0F1419;
+    --nav-glass-bg: rgba(15, 20, 25, 0.78);
+    --nav-glass-border: rgba(242, 238, 233, 0.08);
+    --btn-text-on-accent: #0F1419;
+    --shadow: rgba(0, 0, 0, 0.55);
+    --sombra-btn: 0 2px 12px rgba(93, 217, 199, 0.18);
+    --dot-color: rgba(242, 238, 233, 0.06);
+
+    --color-ciencia: #FF6B5E;
+    --color-redes: #6BCBFF;
+    --color-dev: #FFD060;
+    --color-algoritmos: #A78CFF;
+    --color-pesquisa: #5DD9C7;
 }
 
 * {
@@ -43,6 +63,9 @@ html {
 
 body {
     background-color: var(--bg-color);
+    background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+    background-size: 22px 22px;
+    background-position: 0 0;
     color: var(--text-color);
     font-family: var(--font-main);
     line-height: 1.6;
@@ -203,7 +226,7 @@ img {
     margin-bottom: 2.5rem;
     padding: 0.7rem 1rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: 0;
     color: var(--text-secondary);
     font-size: 0.9rem;
     font-weight: 700;
@@ -236,8 +259,9 @@ img {
     display: block;
     width: 100%;
     max-width: 180px;
-    height: 4px;
-    background: var(--accent-color);
+    height: 0;
+    border-top: 2px dotted var(--accent-color);
+    background: transparent;
     margin-top: 1.2rem;
 }
 
@@ -271,8 +295,9 @@ img {
     content: "";
     display: block;
     width: 100%;
-    height: 3px;
-    background: var(--accent-color);
+    height: 0;
+    border-top: 2px dotted var(--accent-color);
+    background: transparent;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -297,9 +322,9 @@ img {
     margin: 2rem 0;
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 10px 25px var(--shadow);
+    box-shadow: none;
 }
 
 .project-image img {
@@ -339,9 +364,9 @@ img {
     width: 100%;
     overflow-x: auto;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 0;
     background: var(--card-bg);
-    box-shadow: 0 10px 25px var(--shadow);
+    box-shadow: none;
 }
 
 table {
@@ -401,7 +426,7 @@ tbody tr:hover {
     color: var(--btn-text-on-accent);
 
     padding: 0.8rem 2rem;
-    border-radius: 4px;
+    border-radius: 0;
     font-weight: 700;
 
     border: 2px solid var(--accent-color);
