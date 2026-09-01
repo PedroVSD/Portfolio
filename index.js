@@ -205,6 +205,88 @@ function toggleLanguage() {
 
 
 /* =========================================
+   LIGHTBOX — clique na imagem para expandir
+   ========================================= */
+
+function initLightbox() {
+  const images = document.querySelectorAll(".project-image img");
+  if (!images.length) return;
+
+  // cria overlay único
+  let overlay = document.querySelector(".lightbox-overlay");
+  if (!overlay) {
+    overlay = document.createElement("div");
+    overlay.className = "lightbox-overlay";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-label", "Imagem expandida");
+    overlay.innerHTML = `
+      <div class="lightbox-content">
+        <button class="lightbox-close" type="button" aria-label="Fechar imagem">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <img alt="" />
+        <p class="lightbox-caption"></p>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+  }
+
+  const overlayImg = overlay.querySelector("img");
+  const captionEl = overlay.querySelector(".lightbox-caption");
+  const closeBtn = overlay.querySelector(".lightbox-close");
+  const content = overlay.querySelector(".lightbox-content");
+
+  function openLightbox(src, alt, caption) {
+    overlayImg.src = src;
+    overlayImg.alt = alt || "";
+    captionEl.textContent = caption || alt || "";
+    captionEl.style.display = caption || alt ? "block" : "none";
+    overlay.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+    closeBtn.focus();
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
+
+  images.forEach((img) => {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", () => {
+      const figcaption = img.closest("figure")?.querySelector("figcaption");
+      const caption = figcaption ? figcaption.textContent.trim() : "";
+      openLightbox(img.currentSrc || img.src, img.alt, caption);
+    });
+  });
+
+  closeBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    closeLightbox();
+  });
+
+  overlay.addEventListener("click", (e) => {
+    // clique fora da imagem (no overlay) fecha
+    if (e.target === overlay) closeLightbox();
+  });
+
+  // clique no content mas fora da img não deve fechar; já tratado por overlay check
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay.classList.contains("is-open")) {
+      closeLightbox();
+    }
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initLightbox);
+} else {
+  initLightbox();
+}
+
+/* =========================================
    INICIALIZAÇÃO
    ========================================= */
 

@@ -331,6 +331,12 @@ img {
     width: 100%;
     max-height: 650px;
     object-fit: cover;
+    cursor: zoom-in;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.project-image img:hover {
+    filter: brightness(0.96);
 }
 
 .project-image figcaption {
@@ -377,7 +383,7 @@ table {
 }
 
 thead {
-    background: var(--card-hover-bg);
+    background: var(--accent-color);
 }
 
 th,
@@ -390,6 +396,10 @@ td {
 th {
     font-weight: 700;
     color: var(--text-color);
+}
+
+thead th {
+    color: var(--btn-text-on-accent);
 }
 
 td {
@@ -542,6 +552,92 @@ footer {
     th,
     td {
         padding: 0.8rem;
+    }
+}
+
+/* =========================================
+   LIGHTBOX
+   ========================================= */
+
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.84);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    cursor: zoom-out;
+}
+
+.lightbox-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 92vw;
+    max-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+}
+
+.lightbox-content img {
+    max-width: 92vw;
+    max-height: 84vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    display: block;
+}
+
+.lightbox-caption {
+    margin-top: 0.8rem;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    text-align: center;
+    max-width: 80vw;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -44px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255,255,255,0.35);
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.lightbox-close:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--btn-text-on-accent);
+}
+
+@media (max-width: 700px) {
+    .lightbox-overlay {
+        padding: 1rem;
+    }
+    .lightbox-close {
+        top: -48px;
+        right: 0;
     }
 }
 

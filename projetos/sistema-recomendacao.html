@@ -17,9 +17,9 @@
             href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1'/><path d='M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1'/></svg>"
         />
         <link rel="stylesheet" href="../css/projeto.css" />
-        <style>
+                <style>
             :root {
-                --accent-color: #FF6B5E;
+                --accent-color: var(--color-ciencia);
             }
         </style>
     </head>
@@ -230,6 +230,38 @@
                                     Gráfico que representa o valor do RMSE em relação aos valores de K
                                 </figcaption>
                             </figure>
+                        </div>
+                        <div class="table-wrapper" style="margin-top: 1.5rem;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Modelo</th>
+                                        <th>RMSE Treino</th>
+                                        <th>RMSE Validação</th>
+                                        <th>Hiperparâmetro ótimo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>KNN user-based</td>
+                                        <td>0,89</td>
+                                        <td>0,98</td>
+                                        <td>k = 35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>KNN item-based</td>
+                                        <td>0,87</td>
+                                        <td>0,96</td>
+                                        <td>k = 40</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SVD by Funk</strong></td>
+                                        <td><strong>0,8527</strong></td>
+                                        <td><strong>0,9313</strong></td>
+                                        <td>f = 80, λ = 0,02, lr = 0,005</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <p
                             style="

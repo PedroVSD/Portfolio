@@ -17,9 +17,9 @@
             href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1'/><path d='M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1'/></svg>"
         />
         <link rel="stylesheet" href="../css/projeto.css" />
-        <style>
+                <style>
             :root {
-                --accent-color: #00e676;
+                --accent-color: var(--color-ciencia);
             }
         </style>
     </head>
@@ -224,6 +224,38 @@
                                     Figura 3 — Legenda
                                 </figcaption>
                             </figure>
+                        </div>
+                        <div class="table-wrapper" style="margin-top: 1.5rem;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Regra (antecedente → consequente)</th>
+                                        <th>Support</th>
+                                        <th>Confidence</th>
+                                        <th>Lift</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{Contrato Mensal, Sem Parceiro} → {Churn}</td>
+                                        <td>0,12</td>
+                                        <td>0,68</td>
+                                        <td>1,56</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{Fibra Óptica, Fatura Eletrônica} → {Churn}</td>
+                                        <td>0,09</td>
+                                        <td>0,52</td>
+                                        <td>1,33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{Contrato 2 anos} → {Não Churn}</td>
+                                        <td>0,21</td>
+                                        <td>0,89</td>
+                                        <td>1,41</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <p
                             style="
