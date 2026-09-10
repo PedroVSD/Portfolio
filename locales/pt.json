@@ -382,7 +382,7 @@
       "method_title": "Arquitetura",
       "method_p": "FastAPI + SQLAlchemy + Postgres + Docker. Routers, schemas Pydantic, models e services. Migrations e tipagem forte.",
       "tech_title": "Tecnologias",
-      "tech_p": "FastAPI, Python 3.11+, SQLAlchemy 2.0, PostgreSQL, Docker/Compose, Pydantic, Uvicorn, Ollama.",
+      "tech_p": "FastAPI, Python 3.11+, Automação, SQLAlchemy 2.0, PostgreSQL, Docker/Compose, Pydantic, Uvicorn, Ollama.",
       "conclusion_title": "Roadmap",
       "conclusion_p": "Próximos: predições, estatísticas, dashboard, cache Redis, paginação, pytest e CI.",
       "btn_github": "Ver no GitHub",
